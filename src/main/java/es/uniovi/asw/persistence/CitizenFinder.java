@@ -4,6 +4,7 @@ import java.util.List;
 
 import es.uniovi.asw.model.Citizen;
 import es.uniovi.asw.persistence.util.Jpa;
+import es.uniovi.asw.util.Encriptador;
 
 public class CitizenFinder {
 
@@ -17,7 +18,12 @@ public class CitizenFinder {
 	}
 
 	public static Object findByUserAndPass(String user, String pass) {
-		return Jpa.getManager().createNamedQuery("Citizen.findByUserAndPass", Citizen.class).
-				setParameter(1, "Seila_seila").setParameter(2, "llFh9oTmjUI=").getSingleResult();
+		List<Citizen> result= Jpa.getManager().createNamedQuery("Citizen.findByUserAndPass", Citizen.class).
+				setParameter(1, user).setParameter(2, Encriptador.encriptar(pass)).getResultList();
+		
+		if (result.isEmpty())
+			return null;
+
+		return result.get(0);
 	}
 }
