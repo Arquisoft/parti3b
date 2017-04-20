@@ -1,0 +1,72 @@
+<!DOCTYPE html> 
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+	
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <meta charset="utf-8"/> 
+    <title>Signin </title>
+
+    <link th:href="@{/webjars/github-com-twbs-bootstrap/v3.3.7/docs/dist/css/bootstrap.min.css}" media="screen" rel="stylesheet"/>
+    <link th:href="@{/webjars/github-com-twbs-bootstrap/v3.3.7/docs/assets/css/ie10-viewport-bug-workaround.css}"  media="screen" rel="stylesheet"/>
+    <link th:href="@{/webjars/github-com-twbs-bootstrap/v3.3.7/docs/examples/signin/signin.css}"  media="screen" rel="stylesheet"/>
+	<!-- <script src="@{webjars/github-com-twbs-bootstrap/v3.3.7/docs/assets/js/ie8-responsive-file-warning.js"></script> -->	
+  </head>
+  
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Dashboard</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/dashboard">Cuadro de mandos</a></li>
+            <li><a href="#">Test kafka</a></li>
+            <li><a href="#">Perfil</a></li>
+            <li><a href="/salir">Salir</a></li>
+          </ul>
+      
+        </div>
+      </div>
+    </nav>
+
+   
+
+          <h2 class="sub-header">Sugerencias</h2>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th># ID</th>
+                  <th> Titulo</th>
+                    <th><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Likes</th>
+                 	 <th><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislikes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Sugerencia 1</td>
+                  <td>1</td>
+                  <td>0</td>
+                </tr>
+              </tbody>
+            </table>
+       
+        </div>
+    
+
+
+  </body>
+</html>

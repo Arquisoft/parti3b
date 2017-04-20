@@ -6,14 +6,18 @@ import es.uniovi.asw.business.impl.citizen.AddSugerencia;
 import es.uniovi.asw.business.impl.citizen.DeleteComentario;
 import es.uniovi.asw.business.impl.citizen.DeleteSugerencia;
 import es.uniovi.asw.business.impl.citizen.FindComentarioById;
+import es.uniovi.asw.business.impl.citizen.UpdateCitizen;
 import es.uniovi.asw.business.impl.citizen.UpdateSugerencia;
 import es.uniovi.asw.business.impl.citizen.VoteComentario;
 import es.uniovi.asw.business.impl.citizen.VoteSugerencia;
+import es.uniovi.asw.model.Citizen;
 import es.uniovi.asw.model.Comentario;
 import es.uniovi.asw.model.Sugerencia;
 import es.uniovi.asw.model.VotoComentario;
 import es.uniovi.asw.model.VotoSugerencia;
 import es.uniovi.asw.model.exception.BusinessException;
+import es.uniovi.asw.persistence.CitizenFinder;
+import es.uniovi.asw.util.Encriptador;
 
 public class CitizenServiceImpl extends SuperService implements CitizenService {
 	
@@ -60,4 +64,21 @@ public class CitizenServiceImpl extends SuperService implements CitizenService {
 		return (Comentario) cmd.execute(new FindComentarioById(id));
 	}
 
+	@Override
+	public void changePassword(Citizen user, String newPassword) throws BusinessException {
+	
+		if(CitizenFinder.findByDNI(user.getDNI())!=null){
+			user.setPassword(Encriptador.encriptar(newPassword));
+			cmd.execute(new UpdateCitizen(user));
+		}
+	}
+
+	@Override
+	public void changeEmail(Citizen user, String email) throws BusinessException {
+		if(CitizenFinder.findByDNI(user.getDNI())!=null){
+			user.setEmail(email);
+			cmd.execute(new UpdateCitizen(user));
+		}
+	}
+	
 }

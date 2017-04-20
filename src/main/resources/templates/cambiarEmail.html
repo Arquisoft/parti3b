@@ -1,0 +1,64 @@
+<!DOCTYPE html> 
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <meta charset="utf-8"/> 
+    <title>Informacion de ${user.nombre}</title>
+
+    <link th:href="@{/webjars/github-com-twbs-bootstrap/v3.3.7/docs/dist/css/bootstrap.min.css}" media="screen" rel="stylesheet"/>
+    <link th:href="@{/webjars/github-com-twbs-bootstrap/v3.3.7/docs/assets/css/ie10-viewport-bug-workaround.css}"  media="screen" rel="stylesheet"/>
+    <link th:href="@{/webjars/github-com-twbs-bootstrap/v3.3.7/docs/examples/signin/signin.css}"  media="screen" rel="stylesheet"/>
+	<!-- <script src="@{webjars/github-com-twbs-bootstrap/v3.3.7/docs/assets/js/ie8-responsive-file-warning.js"></script> -->	
+  </head>
+<body>
+
+<div class="page-header">
+  <h1>	Ventana del ciudadano <small><span th:text="${user.nombre}"/></small></h1>
+</div>
+
+<!-- menu de navegacion -->
+<nav class="navbar navbar-default">
+<ul class="nav nav-pills">
+  <li role="presentation"><a href="/volverAinfo"><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span> Informacion</a></li>
+  <li role="presentation" class="active" ><a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Cambiar email</a></li>
+  <li role="presentation"><a href="/cambiarP"><span class="glyphicon glyphicon-ruble" aria-hidden="true"></span> Cambiar contraseña</a></li>
+  <li role="presentation"><a href="/salir"> <span class="glyphicon glyphicon-off" aria-hidden="true"></span> Cerrar sesion</a></li>
+</ul>
+</nav>
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-body">
+	<form action="/cambioEmail" method="post">
+	<table border="0">
+        <tr >
+             <td colspan="5" align="center"><h2>Cambiar email</h2></td>
+        </tr>
+        <tr id="err">
+        <br/>
+        <span  th:text="${err}"/>
+        </tr>
+        <tr>
+            <td>Contraseña:</td>
+            <td align="right"><input type="password" name="password" placeholder="password"/></td>
+        </tr>
+        <tr>
+            <td>Nuevo email: </td>
+            <td align="right"><input type="text" name="newEmail" placeholder="nuevo email"/></td>
+        </tr>
+        <tr>
+            <td >
+                <input type="submit" value="Guardar cambios"/>
+            </td>
+        </tr>
+    </table>
+    </form>
+ </div>
+ </div>
+</body>
+</html>

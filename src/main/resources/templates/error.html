@@ -1,0 +1,35 @@
+<html>
+
+<head>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <meta charset="utf-8"/> 
+    <title>Error </title>
+
+    <link th:href="@{/webjars/github-com-twbs-bootstrap/v3.3.7/docs/dist/css/bootstrap.min.css}" media="screen" rel="stylesheet"/>
+    <link th:href="@{/webjars/github-com-twbs-bootstrap/v3.3.7/docs/assets/css/ie10-viewport-bug-workaround.css}"  media="screen" rel="stylesheet"/>
+    <link th:href="@{/webjars/github-com-twbs-bootstrap/v3.3.7/docs/examples/signin/signin.css}"  media="screen" rel="stylesheet"/>
+	<!-- <script src="@{webjars/github-com-twbs-bootstrap/v3.3.7/docs/assets/js/ie8-responsive-file-warning.js"></script> -->	
+  </head>
+<body>
+
+      <div class="alert alert-danger" role="alert">
+      
+	<table border="0" align="center">
+     <tr>
+            <td>Ha ocurrido un error, pongase en contacto con el administrador del sitio.</td>
+        </tr>
+        <tr>
+            <td><span th:text="${err}"/></td>
+        </tr>
+      
+    </table>
+  <a href="/inicio" class="alert-link">Volver al login</a>
+</div>
+       
+</body>
+</html>

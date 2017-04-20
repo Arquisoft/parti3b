@@ -22,7 +22,7 @@ public class MainController {
 	 
     @RequestMapping("/")
     public String landing(Model model) {
-        return "login";
+        return "dashlogin";
     }
     
     @RequestMapping(value = "/login", method = RequestMethod.POST)

@@ -1,5 +1,6 @@
 package es.uniovi.asw.business;
 
+import es.uniovi.asw.model.Citizen;
 import es.uniovi.asw.model.Comentario;
 import es.uniovi.asw.model.Sugerencia;
 import es.uniovi.asw.model.VotoComentario;
@@ -23,5 +24,8 @@ public interface CitizenService {
 	public void voteComentario(VotoComentario voto) throws BusinessException;
 
 	public Comentario findComentarioById(Long id) throws BusinessException;
+	
+	public void changePassword(Citizen user, String newPassword) throws BusinessException;
 
+	public void changeEmail(Citizen user, String email) throws BusinessException;
 }

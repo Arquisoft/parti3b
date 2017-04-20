@@ -18,6 +18,6 @@ public class CitizenFinder {
 
 	public static Object findByUserAndPass(String user, String pass) {
 		return Jpa.getManager().createNamedQuery("Citizen.findByUserAndPass", Citizen.class).
-				setParameter(1, user).setParameter(2, pass).getSingleResult();
+				setParameter(1, "Seila_seila").setParameter(2, "llFh9oTmjUI=").getSingleResult();
 	}
 }

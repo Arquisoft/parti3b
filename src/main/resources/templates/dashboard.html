@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en"
+xmlns:th="http://www.thymeleaf.org"
+xmlns:p="http://primefaces.org/ui">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    
+
+    <title>Dashboard Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+     <link th:href="@{/webjars/github-com-twbs-bootstrap/v3.3.7/docs/dist/css/bootstrap.min.css}" media="screen" rel="stylesheet"/>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link th:href="@{/webjars/github-com-twbs-bootstrap/v3.3.7/docs/assets/css/ie10-viewport-bug-workaround.css}"  media="screen" rel="stylesheet"/>
+    
+    <!-- Custom styles for this template -->
+    <link href="@{/webjars/github-com-twbs-bootstrap/v3.3.7/docs/examples/dashboard/dashboard.css}" rel="stylesheet"/>
+    
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Dashboard</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Perfil</a></li>
+            <li><a href="/salir">Salir</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+   
+   	
+	<p>
+	
+	
+
+	<hr/>
+	
+	</p>
+	<h1 class="page-header">Dashboard</h1>
+   <div class="panel panel-default">
+  <div class="panel-body">
+  
+    <h3 class="sub-header">Panel test</h3>
+	<div class="panel panel-danger">
+	<a class="btn btn-primary" role="button" data-toggle="collapse" href="/enviarTestSugerencia" aria-expanded="false" aria-controls="collapseExample">
+ 		 Eviar sugerencia	 
+	</a>
+	<a class="btn btn-primary" role="button" data-toggle="collapse" href="/limpiar" aria-expanded="false" aria-controls="collapseExample">
+ 		 Limpiar
+	</a>
+	
+	 <div class="panel-heading">Mensajes</div>
+
+ <div id="data" name="data">
+  <div th:each="item : ${mensajes}">
+ 	 <p th:text="${item}" />
+	</div>
+	</div>
+	
+  <div class="panel-body">    
+
+	
+  </div>
+	
+	
+	</div>
+  
+
+          <h3 class="sub-header">Sugerencias</h3>
+          
+          <div class="table-responsive">
+            <table id="tabla" class="table table-striped">
+              <thead>
+                <tr>
+                  <th>#Id</th>
+                  <th>Titulo</th>
+                  <th>Autor</th>
+                  <th>Likes</th>
+                  <th>Dislikes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr th:each="item,iterationStatus   : ${sugerencias}">
+                  <td th:text="${item.id}">1,001</td>
+                  <td th:text="${item.titulo}">Lorem</td>
+                  <td th:text="${item.citizen.usuario}">ipsum</td>
+                  <td th:text="${item.getPosVotes()}">dolor</td>
+                   <td th:text="${item.getNegVotes()}">dolor</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+
+  </div>
+</div>
+  </body>
+</html>
+
+
