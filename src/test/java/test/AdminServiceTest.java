@@ -20,6 +20,7 @@ public class AdminServiceTest {
 	
 	@Test
 	public void addDeleteCategoriaTest() throws BusinessException {
+		
 		int numCatAntes = Services.getSystemServices().findAllCategories().size();
 		
 		Categoria categoria = new Categoria("categoriaPrueba", new Date(), new Date(), 100);
