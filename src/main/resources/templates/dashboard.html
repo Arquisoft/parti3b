@@ -11,8 +11,13 @@ xmlns:p="http://primefaces.org/ui">
     <meta name="author" content=""/>
     
 
-    <title>Dashboard Template for Bootstrap</title>
-
+    <title>Dashboard </title>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+	<script src="/webjars/sockjs-client/sockjs.min.js"></script>
+	<script src="/webjars/jquery/3.2.0/jquery.min.js"></script>
+	<script src="/webjars/stomp-websocket/stomp.min.js"></script>
+	
     <!-- Bootstrap core CSS -->
      <link th:href="@{/webjars/github-com-twbs-bootstrap/v3.3.7/docs/dist/css/bootstrap.min.css}" media="screen" rel="stylesheet"/>
 
@@ -21,7 +26,27 @@ xmlns:p="http://primefaces.org/ui">
     
     <!-- Custom styles for this template -->
     <link href="@{/webjars/github-com-twbs-bootstrap/v3.3.7/docs/examples/dashboard/dashboard.css}" rel="stylesheet"/>
-    
+    <script>
+		$(document).ready(function() {
+		var dataMensajes = $("#dataMensajes");
+		
+		var socket = new SockJS('/wsocket');
+
+		var stompClient = Stomp.over(socket);
+
+	    stompClient.connect({ }, function(frame) {
+			stompClient.subscribe("/topic/mensajes", function(data) {
+				var mensaje = JSON.parse(data.body);
+					var htmlstring = `
+					<tr>
+						<td>${mensaje.message}</td>
+					</tr>
+					`;
+					 dataMensajes.append(htmlstring);
+			});
+	    });
+	});
+	</script>
   </head>
 
   <body>
@@ -46,36 +71,26 @@ xmlns:p="http://primefaces.org/ui">
         </div>
       </div>
     </nav>
-   
-   	
-	<p>
+     
 	
 	
 
 	<hr/>
 	
-	</p>
 	<h1 class="page-header">Dashboard</h1>
    <div class="panel panel-default">
   <div class="panel-body">
   
-    <h3 class="sub-header">Panel test</h3>
+    <h3 class="sub-header">Consola</h3>
 	<div class="panel panel-danger">
-	<a class="btn btn-primary" role="button" data-toggle="collapse" href="/enviarTestSugerencia" aria-expanded="false" aria-controls="collapseExample">
- 		 Eviar sugerencia	 
-	</a>
 	<a class="btn btn-primary" role="button" data-toggle="collapse" href="/limpiar" aria-expanded="false" aria-controls="collapseExample">
  		 Limpiar
 	</a>
 	
 	 <div class="panel-heading">Mensajes</div>
 
- <div id="data" name="data">
-  <div th:each="item : ${mensajes}">
- 	 <p th:text="${item}" />
-	</div>
-	</div>
-	
+ <table id="dataMensajes">
+	</table>
   <div class="panel-body">    
 
 	
@@ -100,11 +115,11 @@ xmlns:p="http://primefaces.org/ui">
               </thead>
               <tbody>
                 <tr th:each="item,iterationStatus   : ${sugerencias}">
-                  <td th:text="${item.id}">1,001</td>
-                  <td th:text="${item.titulo}">Lorem</td>
-                  <td th:text="${item.citizen.usuario}">ipsum</td>
-                  <td th:text="${item.getPosVotes()}">dolor</td>
-                   <td th:text="${item.getNegVotes()}">dolor</td>
+                  <td th:text="${item.id}"></td>
+                  <td th:text="${item.titulo}"></td>
+                  <td th:text="${item.citizen.usuario}"></td>
+                  <td th:text="${item.getPosVotes()}"></td>
+                   <td th:text="${item.getNegVotes()}"></td>
                 </tr>
               </tbody>
             </table>
