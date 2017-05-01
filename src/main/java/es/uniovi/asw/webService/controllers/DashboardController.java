@@ -1,14 +1,13 @@
 package es.uniovi.asw.webService.controllers;
 
 import java.sql.Date;
-import java.util.List;
+
 
 import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
-import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.messaging.MessagingException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,16 +17,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.mysql.cj.mysqlx.io.AsyncMessageReader.MessageListener;
 
 import es.uniovi.asw.business.CitizenService;
 import es.uniovi.asw.business.SystemService;
 import es.uniovi.asw.business.impl.CitizenServiceImpl;
 import es.uniovi.asw.business.impl.SystemServiceImpl;
-import es.uniovi.asw.listeners.KafkaListenerFactory;
 import es.uniovi.asw.model.Administrador;
 import es.uniovi.asw.model.Citizen;
-import es.uniovi.asw.model.Sugerencia;
 import es.uniovi.asw.model.exception.BusinessException;
 import es.uniovi.asw.util.Encriptador;
 import es.uniovi.asw.util.VerificadorEmail;
@@ -36,7 +32,7 @@ import es.uniovi.asw.util.VerificadorEmail;
 @Scope("session")
 public class DashboardController {
 
-	private boolean test = true;
+	private boolean test = false;
 	private Citizen testCitizen = new Citizen("NombreDeTest", "ApellidosDeTest",
 			"testemail@email", new Date(0), "C\\direccionDeTest", "Esp", "71905648",
 			"ciudadano1", "ciudadano");
@@ -153,7 +149,7 @@ public class DashboardController {
 					session.setAttribute("user", ciudadano);
 					session.setAttribute("tipo", "ciudadano");
 					modelo.addAttribute("user", ciudadano);
-					return "infoUsuario";
+					return "listaSolicitudes";
 				}
 			}
 		} catch (BusinessException e) {

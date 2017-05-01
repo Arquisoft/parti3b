@@ -10,7 +10,7 @@ public class AdministradorFinder {
 	
 	public static Object findByUserAndPass(String user, String pass) {
 		List<Administrador> admin = Jpa.getManager().createNamedQuery("Admin.findByUserAndPass", Administrador.class).
-				setParameter(1, user).setParameter(2, Encriptador.encriptar(pass)).getResultList();
+				setParameter(1, user).setParameter(2,pass).getResultList();
 		if(!admin.isEmpty()){
 			return admin.get(0);
 		}
