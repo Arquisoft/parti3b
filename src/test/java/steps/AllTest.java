@@ -44,7 +44,7 @@ public class AllTest {
 	public void i_login_with_name_and_password(String arg1, String arg2) throws Throwable {
 		driver.get(baseUrl+"/");
 		SeleniumUtils.EsperaCargaPagina(driver, "id", "loginButton", 10);
-		SeleniumUtils.escribirInput(driver, "username", arg1);
+		SeleniumUtils.escribirInput(driver, "Email", arg1);
 		
 		SeleniumUtils.clickButton(driver, "loginButton");
 	}
@@ -65,11 +65,12 @@ public class AllTest {
 		
 		SeleniumUtils.EsperaCargaPagina(driver, "id", "crear", 10);
 		SeleniumUtils.textoPresentePagina(driver, "Crea tu propuesta");
-		SeleniumUtils.clickButton(driver, "salir");
+		//SeleniumUtils.clickButton(driver, "salir");
 		
+		driver.get(baseUrl+"/");
 		SeleniumUtils.entrarComoAdmin(driver);
 		
-		SeleniumUtils.EsperaCargaPagina(driver, "id", "salir", 10);
+		//SeleniumUtils.EsperaCargaPagina(driver, "id", "salir", 10);
 		SeleniumUtils.textoNoPresentePagina(driver, "Crea tu propuesta");
 	}
 	
