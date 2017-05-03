@@ -152,6 +152,8 @@ public class DashboardController {
 					session.setAttribute("user", ciudadano);
 					session.setAttribute("tipo", "ciudadano");
 					modelo.addAttribute("user", ciudadano);
+					Actions.listarSugerencias(modelo, ciudadano);
+					session.setAttribute("admin", null);
 					logger.info("Iniciando sesion como usuario ( user=" + ciudadano.getUsuario() + ")");
 					return "listaSolicitudes";
 				}
