@@ -42,7 +42,8 @@ public class MessageListener {
     	Sugerencia sugg = Message.getSugerenciaFromJSON(data);
         estadisticas.añadirSugerencia(sugg);
         
-        estadisticas.sendToAdminConsole("[CREAR SUGERENCIA] Autor de la accion [id="+sugg.getCitizen().getId()+"] " + sugg.getCitizen().getNombre() + 
+        
+        estadisticas.enviarAConsolaAdmin("[CREAR SUGERENCIA] Autor de la accion [id="+sugg.getCitizen().getId()+"] " + sugg.getCitizen().getNombre() + 
         		"  [id=" + sugg.getId() + "] " + sugg.getTitulo());
         logger.info("[CREAR SUGERENCIA] Autor de la accion [id="+sugg.getCitizen().getId()+"] " + sugg.getCitizen().getNombre() + 
         		"  [id=" + sugg.getId() + "] " + sugg.getTitulo());
@@ -52,7 +53,7 @@ public class MessageListener {
     public void deleteSuggestion(String data) {
     	Sugerencia sugg = Message.getSugerenciaFromJSON(data);
         
-        estadisticas.sendToAdminConsole("[ELIMINAR SUGERENCIA] Autor de la accion [id="+sugg.getCitizen().getId()+"] " + sugg.getCitizen().getNombre() + 
+        estadisticas.enviarAConsolaAdmin("[ELIMINAR SUGERENCIA] Autor de la accion [id="+sugg.getCitizen().getId()+"] " + sugg.getCitizen().getNombre() + 
         		"  [id=" + sugg.getId() + "] " + sugg.getTitulo());
         
         logger.info("[ELIMINAR SUGERENCIA] Autor de la accion [id="+sugg.getCitizen().getId()+"] " + sugg.getCitizen().getNombre() + 
@@ -64,8 +65,8 @@ public class MessageListener {
     public void voteSuggPositive(String data) {
     	VotoSugerencia voto = Message.getVotoSugerenciaFromJSON(data);
     	
-        estadisticas.sendToAdminConsole("[VOTAR SUGERENCIA] Autor de la accion [id="+voto.getCitizen().getId()+"] " +
-        voto.getCitizen().getNombre());
+        estadisticas.enviarAConsolaAdmin("[VOTAR SUGERENCIA] Autor de la accion [id="+voto.getCitizen().getId()+"] " +
+        voto.getCitizen().getNombre() + " en sugerencia: [id="+voto.getSugerencia().getId()+"]"+ voto.getSugerencia().getTitulo());
         
         logger.info("[VOTAR SUGERENCIA] Autor de la accion [id="+voto.getCitizen().getId()+"] " +
         voto.getCitizen().getNombre());
@@ -76,11 +77,11 @@ public class MessageListener {
     public void commentSuggestion(String data) {
     	Comentario comentario = Message.getComentarioFromJSON(data);
         
-        estadisticas.sendToAdminConsole("[COMENTARS SUGERENCIA] Autor del comentario [id="+ comentario.getCitizen().getId()+"] " +
-        		comentario.getCitizen().getNombre()+ " en la sugerencia: " + comentario.getSugerencia());
+        estadisticas.enviarAConsolaAdmin("[COMENTARS SUGERENCIA] Autor del comentario [id="+ comentario.getCitizen().getId()+"] " +
+        		comentario.getCitizen().getNombre()+ " en la sugerencia: " + comentario.getSugerencia().getTitulo());
         
         logger.info("[COMENTARS SUGERENCIA] Autor del comentario [id="+ comentario.getCitizen().getId()+"] " +
-        comentario.getCitizen().getNombre()+ " en la sugerencia: " + comentario.getSugerencia());
+        comentario.getCitizen().getNombre()+ " en la sugerencia: [id=" + comentario.getSugerencia().getId()+"]" + comentario.getSugerencia().getTitulo());
     }
     
 //    @KafkaListener(topics =  "DELETE_COMMENT")
@@ -95,12 +96,12 @@ public class MessageListener {
     @KafkaListener(topics = Topics.VOTE_COMMENT)
     public void voteComment(String data) {
     	VotoComentario votoComentario = Message.getVotoComentarioFromJSON(data);
-        logger.info("New message received: [ELIMINAR COMENTARIO]  \"" +  data + "\"");
+      //  logger.info("New message received: [ELIMINAR COMENTARIO]  \"" +  data + "\"");
         
-        estadisticas.sendToAdminConsole("[ELIMINAR COMENTARIO] Autor de la accion [id="+ votoComentario.getCitizen().getId()+"] " +
+        estadisticas.enviarAConsolaAdmin("[VOTO COMENTARIO] Autor de la accion [id="+ votoComentario.getCitizen().getId()+"] " +
                 votoComentario.getCitizen().getNombre()+ " en el comentario: " + votoComentario.getComentario());
         
-        logger.info("[ELIMINAR COMENTARIO] Autor de la accion [id="+ votoComentario.getCitizen().getId()+"] " +
+        logger.info("[VOTAR COMENTARIO] Autor de la accion [id="+ votoComentario.getCitizen().getId()+"] " +
         votoComentario.getCitizen().getNombre()+ " en el comentario: " + votoComentario.getComentario());
     }
 

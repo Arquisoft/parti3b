@@ -93,22 +93,24 @@ public class DashboardController {
 		 * Password: ciudadano
 		 * 
 		 * */
-		logger.info("Iniciando sesion");
+	
 		
 		if (test) {
 			if (nombre.equals(testAdmin.getUsuario())
 					&& password.equals(testAdmin.getPassword())) {
+				logger.info("Iniciando sesion como admin de pruebas");
 				session.setAttribute("user", testAdmin);
 				session.setAttribute("tipo", "admin");
 				
 
-				modelo.addAttribute("mensajes", estadisticas.getMensajes());
+				modelo.addAttribute("sugerencias", estadisticas.getSugerencias());
 				
 				return "dashboard";
 
 			} else if (nombre.equals(testCitizen.getUsuario())
 					&& password.equals(testCitizen.getPassword())) {
 
+				logger.info("Iniciando sesion como usuario de pruebas");
 				session.setAttribute("user", testCitizen);
 				session.setAttribute("tipo", "ciudadano");
 				modelo.addAttribute("user", testCitizen);
@@ -134,9 +136,10 @@ public class DashboardController {
 			if (admin != null) {
 				session.setAttribute("user", admin);
 				session.setAttribute("tipo", "admin");
-				modelo.addAttribute("mensajes", estadisticas.getMensajes());
+				
 				modelo.addAttribute("sugerencias", estadisticas.getSugerencias());
 				
+				logger.info("Iniciando sesion como administrador ( user=" + admin.getUsuario() + ")");
 				return "dashboard";
 			} else {
 
@@ -149,6 +152,7 @@ public class DashboardController {
 					session.setAttribute("user", ciudadano);
 					session.setAttribute("tipo", "ciudadano");
 					modelo.addAttribute("user", ciudadano);
+					logger.info("Iniciando sesion como usuario ( user=" + ciudadano.getUsuario() + ")");
 					return "listaSolicitudes";
 				}
 			}
@@ -299,21 +303,23 @@ public class DashboardController {
 		}
 	}
 
-	@RequestMapping("/enviarTestSugerencia")
-	public String send(Model model) throws MessagingException, JsonProcessingException {
-		estadisticas.añadirMensaje("Enviando sugerencia");
-		
-		// kProducer.send("CREATE_SUGGESTION", );
-		return "dashboard";
-	}
-
+	
 	@RequestMapping("/limpiar")
 	public String limpiarMensajes(Model model){
 		estadisticas.limpiar();
+		return "dashcons";
+	}
+	@RequestMapping(value = "/consolaDashboard")
+	public String navegarDashboardConsola(Model modelo) {
+		modelo.addAttribute("mensajes", estadisticas.getMensajes());
+		return "dashcons";
+	}
+	@RequestMapping(value = "/inicioDashboard")
+	public String navegarDashboardInicio(Model modelo) {
+
+		modelo.addAttribute("sugerencias", estadisticas.getSugerencias());
 		return "dashboard";
 	}
-
-
 	public Estadisticas getEstadisticas() {
 		return estadisticas;
 	}

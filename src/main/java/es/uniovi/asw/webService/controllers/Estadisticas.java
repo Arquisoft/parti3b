@@ -6,13 +6,12 @@ import java.util.List;
 
 import javax.annotation.ManagedBean;
 
-import org.codehaus.groovy.control.messages.SimpleMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.MessagingException;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
-import org.springframework.scheduling.annotation.Scheduled;
+
 import org.springframework.stereotype.Controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -37,13 +36,16 @@ public class Estadisticas {
 	public List<String> mensajes = new ArrayList<String>();
 
 	public Estadisticas() throws BusinessException{
-		crearCategoriaEjemplo();
-	//cargarSugerencias();
-		añadirMensaje("Mensajes: ");
+		cargarSugerencias();
+		//crearCategoriaEjemplo();
+	
+	//	añadirMensaje("Mensajes: ");
+		
 	}
 	
 	public void añadirSugerencia(Sugerencia sug)
 	{
+		sendToSugTable(sug);
 		sugerencias.add(sug);
 	}
 	
@@ -51,7 +53,7 @@ public class Estadisticas {
 	@SendTo("/topic/sugerencias")
 	private List<Sugerencia> cargarSugerencias() throws BusinessException {
 		
-		sugerencias.addAll(Services.getSystemServices().findAllSugerencias());
+		sugerencias= Services.getSystemServices().findAllSugerencias();
 		return sugerencias;
 	}
 	
@@ -64,18 +66,18 @@ public class Estadisticas {
 		this.sugerencias = topSugerencias;
 	}
 	
-	private void crearCategoriaEjemplo(){
-		Citizen testCitizen= new Citizen("nombre" + sugerencias.size(), "apellidos","testemail" +sugerencias.size()+ "@email",new Date() , sugerencias.size()+"direccion",
-				"nacionalidad","DNI", "usuario"+sugerencias.size(), "password");
-		Categoria testCategoria = new Categoria("testCategoria",new Date() ,new Date() , 2);
-		Sugerencia testSugerencia = new Sugerencia(testCitizen,"titulo", "contenido", testCategoria);
-		VotoSugerencia testVotoSugerencia = new VotoSugerencia(testSugerencia, testCitizen, true);
-		testSugerencia.getVotos().add(testVotoSugerencia);
-		//testSugerencia.setId(Long.parseLong(String.valueOf(topSugerencias.size())));
-		sugerencias.add(testSugerencia);
-
-//		kafkaProducer.send(Topics.CREATE_SUGGESTION, Message.setMessage(testSugerencia));
-	}
+//	private void crearCategoriaEjemplo(){
+//		Citizen testCitizen= new Citizen("nombre" + sugerencias.size(), "apellidos","testemail" +sugerencias.size()+ "@email",new Date() , sugerencias.size()+"direccion",
+//				"nacionalidad","DNI", "usuario"+sugerencias.size(), "password");
+//		Categoria testCategoria = new Categoria("testCategoria",new Date() ,new Date() , 2);
+//		Sugerencia testSugerencia = new Sugerencia(testCitizen,"titulo", "contenido", testCategoria);
+//		VotoSugerencia testVotoSugerencia = new VotoSugerencia(testSugerencia, testCitizen, true);
+//		testSugerencia.getVotos().add(testVotoSugerencia);
+//		//testSugerencia.setId(Long.parseLong(String.valueOf(topSugerencias.size())));
+//		sugerencias.add(testSugerencia);
+//
+////		kafkaProducer.send(Topics.CREATE_SUGGESTION, Message.setMessage(testSugerencia));
+//	}
 	
 	
 	public List<String> getMensajes() {
@@ -92,10 +94,11 @@ public class Estadisticas {
 	 * Metodo que envia informacion a la consola visible por el administrador desde el dashboard
 	 * @param msg: mensaje a mostrar 
 	 */
-	public void sendToAdminConsole(String msg) {
+	public void enviarAConsolaAdmin(String msg) {
         try {
 	
         	template.convertAndSend("/topic/mensajes", new ObjectMapper().writeValueAsString(new SimpleAdminMessage(msg)));
+        	añadirMensaje(msg);
         	System.out.println(msg);
     
         } catch (MessagingException e) {
@@ -107,7 +110,20 @@ public class Estadisticas {
       
 	}
 	
+	public void sendToSugTable(Sugerencia sug) {
+        try {
 	
+        	template.convertAndSend("/topic/sugerencias", new ObjectMapper().writeValueAsString(sug));
+        	
+    
+        } catch (MessagingException e) {
+        	
+			e.printStackTrace();
+		} catch (JsonProcessingException e) {
+			e.printStackTrace();
+		}
+      
+	}
 	public void limpiar(){
 		añadirMensaje("Mensajes: ");
 		mensajes.clear();
