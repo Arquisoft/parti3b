@@ -28,26 +28,27 @@ xmlns:p="http://primefaces.org/ui">
     <link href="@{/webjars/github-com-twbs-bootstrap/v3.3.7/docs/examples/dashboard/dashboard.css}" rel="stylesheet"/>
     <script>
 		$(document).ready(function() {
-		var tabla = $("#tabla");
-
+		var tabla = $("#tablaSug");
+	
+		var dataMensajes = $("#dataMensajes");
 		var socket = new SockJS('/wsocket');
 
 		var stompClient = Stomp.over(socket);
-
+		
 	    stompClient.connect({ }, function(frame) {
-			stompClient.subscribe("/topic/sugerencias", function(data) {
-				var sugEncontrada = false;
-				var sugerencia = JSON.parse(data.body);
-					var htmlstring = `
+			stompClient.subscribe("/topic/sugerencia", function(data) {
+					var sugerencia = JSON.parse(data.body);
+				var htmlstring = `
 					<tr>
-						<td> aa </td>
-                 	 	<td> ${sugerencia.citizen.usuario}</td>
-                  		<td> ${sugerencia.getPosVotes()}</td>
-                   		<td> ${sugerencia.getNegVotes()}</td>
+						<td> ${sugerencia.id}</td>
+						<td> ${sugerencia.titulo}</td>
+                 	 	<td> ${sugerencia.autor} </td>
+                  		<td> ${sugerencia.pos}</td>
+                   		<td> ${sugerencia.neg}</td>
 					</tr>
 					`;
+					 dataMensajes.append(htmlstring);
 					 tabla.append(htmlstring);
-				
 			});
 	    });
 	});
@@ -70,7 +71,6 @@ xmlns:p="http://primefaces.org/ui">
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Perfil</a></li>
             <li><a id="salir" href="/salir">Salir</a></li>
           </ul>
         </div>
@@ -101,7 +101,7 @@ xmlns:p="http://primefaces.org/ui">
           <h3 class="sub-header">Sugerencias</h3>
           
           <div class="table-responsive">
-            <table id="tabla" class="table table-striped">
+            <table id="tablaSug" class="table table-striped">
               <thead>
                 <tr>
                   <th>#Id</th>
@@ -127,6 +127,14 @@ xmlns:p="http://primefaces.org/ui">
     
   </div>
 </div>
+<table id="dataMensajes">
+   <tbody>
+           <tr th:each="item,iterationStatus   : ${mensajes}">
+               <td th:text="${item}"></td>
+               </tr>
+           </tbody>
+ 
+	</table>
   </body>
 </html>
 

@@ -45,7 +45,7 @@ public class Estadisticas {
 	
 	public void añadirSugerencia(Sugerencia sug)
 	{
-		sendToSugTable(sug);
+		enivarATablaAdmin(sug);
 		sugerencias.add(sug);
 	}
 	
@@ -110,16 +110,15 @@ public class Estadisticas {
       
 	}
 	
-	public void sendToSugTable(Sugerencia sug) {
+	public void enivarATablaAdmin(Sugerencia sug) {
         try {
 	
-        	template.convertAndSend("/topic/sugerencias", new ObjectMapper().writeValueAsString(sug));
         	
+        	template.convertAndSend("/topic/sugerencia", new ObjectMapper().writeValueAsString(new SimpleSugMessage(sug)));
+        	System.out.println(sug);
     
-        } catch (MessagingException e) {
+        } catch (MessagingException | JsonProcessingException e) {
         	
-			e.printStackTrace();
-		} catch (JsonProcessingException e) {
 			e.printStackTrace();
 		}
       
@@ -149,6 +148,61 @@ class SimpleAdminMessage{
 
 	public void setMessage(String message) {
 		this.message = message;
+	}
+}
+class SimpleSugMessage{
+	private long id=0;
+	private String autor;
+	private String titulo;
+	private int pos;
+	private int neg;
+	
+	public SimpleSugMessage(Sugerencia sug){
+		id=sug.getId();
+		autor = sug.getCitizen().getUsuario();
+		titulo = sug.getTitulo();
+		pos=sug.getPosVotes();
+		neg = sug.getNegVotes();
+	}
+	
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+
+	public long getId() {
+		return id;
+	}
+
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+
+	public String getAutor() {
+		return autor;
+	}
+	public void setAutor(String autor) {
+		this.autor = autor;
+	}
+	public int getPos() {
+		return pos;
+	}
+	public void setPos(int pos) {
+		this.pos = pos;
+	}
+	public int getNeg() {
+		return neg;
+	}
+	public void setNeg(int neg) {
+		this.neg = neg;
 	}
 }
 
