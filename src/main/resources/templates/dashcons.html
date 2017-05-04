@@ -28,26 +28,21 @@ xmlns:p="http://primefaces.org/ui">
     <link href="@{/webjars/github-com-twbs-bootstrap/v3.3.7/docs/examples/dashboard/dashboard.css}" rel="stylesheet"/>
     <script>
 		$(document).ready(function() {
-		var tabla = $("#tabla");
-
+		var dataMensajes = $("#dataMensajes");
+		
 		var socket = new SockJS('/wsocket');
 
 		var stompClient = Stomp.over(socket);
 
 	    stompClient.connect({ }, function(frame) {
-			stompClient.subscribe("/topic/sugerencias", function(data) {
-				var sugEncontrada = false;
-				var sugerencia = JSON.parse(data.body);
+			stompClient.subscribe("/topic/mensajes", function(data) {
+				var mensaje = JSON.parse(data.body);
 					var htmlstring = `
 					<tr>
-						<td> aa </td>
-                 	 	<td> ${sugerencia.citizen.usuario}</td>
-                  		<td> ${sugerencia.getPosVotes()}</td>
-                   		<td> ${sugerencia.getNegVotes()}</td>
+						<td>${mensaje.message}</td>
 					</tr>
 					`;
-					 tabla.append(htmlstring);
-				
+					 dataMensajes.append(htmlstring);
 			});
 	    });
 	});
@@ -70,8 +65,7 @@ xmlns:p="http://primefaces.org/ui">
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Perfil</a></li>
-            <li><a id="salir" href="/salir">Salir</a></li>
+            <li><a href="/salir">Salir</a></li>
           </ul>
         </div>
       </div>
@@ -86,46 +80,39 @@ xmlns:p="http://primefaces.org/ui">
    <div class="panel panel-default">
   <div class="panel-body">
   
-
+  <div class="panel panel-default">
 <!-- menu de navegacion -->
 <nav class="navbar navbar-default">
 <ul class="nav nav-pills">
-  <li role="presentation" class="active"><a href="/inicioDashboard"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span>  Sugerencias</a></li>
-  <li role="presentation"><a href="/consolaDashboard"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>  Consola</a></li>
+  <li role="presentation" ><a href="/inicioDashboard"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span>  Sugerencias</a></li>
+  <li role="presentation" class="active"><a href="/consolaDashboard"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>  Consola</a></li>
 </ul>
 </nav>
 
-
-
-
-          <h3 class="sub-header">Sugerencias</h3>
-          
-          <div class="table-responsive">
-            <table id="tabla" class="table table-striped">
-              <thead>
-                <tr>
-                  <th>#Id</th>
-                  <th>Titulo</th>
-                  <th>Autor</th>
-                  <th><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>  Likes</th>
-                  <th><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>  Dislikes</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr th:each="item,iterationStatus   : ${sugerencias}">
-                  <td th:text="${item.id}"></td>
-                  <td th:text="${item.titulo}"></td>
-                  <td th:text="${item.citizen.usuario}"></td>
-                  <td th:text="${item.getPosVotes()}"></td>
-                   <td th:text="${item.getNegVotes()}"></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-
-    
+	<div class="panel panel-danger">
+	 <div class="panel-heading">Mensajes</div>
+ <table id="dataMensajes">
+   <tbody>
+           <tr th:each="item,iterationStatus   : ${mensajes}">
+               <td th:text="${item}"></td>
+               </tr>
+           </tbody>
+ 
+	</table>
+	<p/>
+    <p/>
+     <p/>
+   
+     
+</div>
+	  <a class="btn btn-primary" role="button" data-toggle="collapse" href="/limpiar" aria-expanded="false" aria-controls="collapseExample">
+ 		 Limpiar
+	</a>
   </div>
+	
+
+
+</div>
 </div>
   </body>
 </html>

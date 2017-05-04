@@ -88,14 +88,16 @@ public class SeleniumUtils {
 		
 		static public void entrarComoUsuario(WebDriver driver) {
 			SeleniumUtils.EsperaCargaPagina(driver, "id", "loginButton", 10);
-			SeleniumUtils.textoPresentePagina(driver, "Inicia sesion");
+			SeleniumUtils.textoPresentePagina(driver, "Inicie sesión");
+			SeleniumUtils.escribirInput(driver, "Email", "user1");
+			SeleniumUtils.escribirInput(driver, "Password", "user1");
 			
 			SeleniumUtils.clickButton(driver, "loginButton");
 		}
 		
 		static public void entrarComoAdmin(WebDriver driver) {
 			SeleniumUtils.EsperaCargaPagina(driver, "id", "loginButton", 10);
-			SeleniumUtils.escribirInput(driver, "username", "admin");
+			SeleniumUtils.escribirInput(driver, "Email", "admin");
 			
 			SeleniumUtils.clickButton(driver, "loginButton");
 		}

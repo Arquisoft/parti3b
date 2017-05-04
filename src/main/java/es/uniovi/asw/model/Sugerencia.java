@@ -20,20 +20,29 @@ import es.uniovi.asw.model.exception.BusinessException;
 import es.uniovi.asw.model.types.SugerenciaStatus;
 import es.uniovi.asw.persistence.util.Jpa;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @SuppressWarnings("serial")
 @Entity
 @Table(name="TSUGERENCIA")
 public class Sugerencia implements Serializable{
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY) @Expose private long id;
 	@ManyToOne @Expose
+	@JsonIgnore
 	private Citizen citizen;
 	@Expose private String titulo;
 	@Expose private String contenido;
-	@OneToMany(mappedBy="sugerencia") 
+
+	@OneToMany(mappedBy="sugerencia")
+	@JsonIgnore
 	private Set<Comentario> comentarios = new HashSet<>();
-	@OneToMany(mappedBy="sugerencia") 
+
+	@OneToMany(mappedBy="sugerencia")
+	@JsonIgnore
 	private Set<VotoSugerencia> votos = new HashSet<>();
+	
 	@Expose @Enumerated(EnumType.STRING) private SugerenciaStatus estado;
+	@JsonIgnore
 	@ManyToOne @Expose
 	private Categoria categoria;
 	

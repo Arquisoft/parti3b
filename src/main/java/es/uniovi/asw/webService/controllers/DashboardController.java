@@ -1,13 +1,14 @@
 package es.uniovi.asw.webService.controllers;
 
 import java.sql.Date;
-import java.util.List;
+
 
 import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
+import org.springframework.messaging.MessagingException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -15,13 +16,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+
 import es.uniovi.asw.business.CitizenService;
 import es.uniovi.asw.business.SystemService;
 import es.uniovi.asw.business.impl.CitizenServiceImpl;
 import es.uniovi.asw.business.impl.SystemServiceImpl;
 import es.uniovi.asw.model.Administrador;
 import es.uniovi.asw.model.Citizen;
-import es.uniovi.asw.model.Sugerencia;
 import es.uniovi.asw.model.exception.BusinessException;
 import es.uniovi.asw.util.Encriptador;
 import es.uniovi.asw.util.VerificadorEmail;
@@ -37,22 +39,13 @@ public class DashboardController {
 	private Administrador testAdmin = new Administrador("admin", "admin");
 
 	private static final Logger logger = Logger.getLogger(DashboardController.class);
-	//private List<Object> sseEmitters = Collections.synchronizedList(new ArrayList<>());
 
 	@Autowired
 	private Estadisticas estadisticas;
 
-//	@Autowired
-//	private KafkaProducer kafkaProducer;
-
-	/*@RequestMapping("/")
-	public String landing(Model model) {
-		return "login";
-	}*/
-
 	@RequestMapping("/inicio")
 	public String log() {
-		return "login";
+		return "dashlogin";
 	}
 
 	// Salimos de sesion
@@ -61,7 +54,7 @@ public class DashboardController {
 		session.removeAttribute("user");
 		model.addAttribute("user", null);
 		logger.info("Cerrando sesion");
-		return "login";
+		return "dashlogin";
 
 	}
 
@@ -88,7 +81,7 @@ public class DashboardController {
 	 */
 	@RequestMapping(value = "/entrar", method = RequestMethod.POST)
 	public String getParticipantInfo(HttpSession session, Model modelo,
-			@RequestParam String nombre, @RequestParam String password) {
+			@RequestParam String nombre, @RequestParam String password) throws BusinessException {
 
 		/******************
 		 * TEST ************************
@@ -100,28 +93,31 @@ public class DashboardController {
 		 * Password: ciudadano
 		 * 
 		 * */
-		logger.info("Iniciando sesion");
+	
+		
 		if (test) {
 			if (nombre.equals(testAdmin.getUsuario())
 					&& password.equals(testAdmin.getPassword())) {
-
+				logger.info("Iniciando sesion como admin de pruebas");
 				session.setAttribute("user", testAdmin);
 				session.setAttribute("tipo", "admin");
-				// modelo.setAttribute("mensajes" )
-				modelo.addAttribute("mensajes", estadisticas.getMensajes());
+				
 
+				modelo.addAttribute("sugerencias", estadisticas.getSugerencias());
+				
 				return "dashboard";
 
 			} else if (nombre.equals(testCitizen.getUsuario())
 					&& password.equals(testCitizen.getPassword())) {
 
+				logger.info("Iniciando sesion como usuario de pruebas");
 				session.setAttribute("user", testCitizen);
 				session.setAttribute("tipo", "ciudadano");
 				modelo.addAttribute("user", testCitizen);
 				return "infoUsuario";
 			} else {
 				modelo.addAttribute("err", "Usuario no encontrado");
-				return "login";
+				return "dashlogin";
 			}
 		}
 		
@@ -131,7 +127,7 @@ public class DashboardController {
 		 * ******************************************************/
 		if (nombre.length() <= 0 || password.length() <= 0) {
 			modelo.addAttribute("err", "Complete todos los campos");
-			return "login";
+			return "dashlogin";
 		}
 
 		try {
@@ -140,6 +136,10 @@ public class DashboardController {
 			if (admin != null) {
 				session.setAttribute("user", admin);
 				session.setAttribute("tipo", "admin");
+				
+				modelo.addAttribute("sugerencias", estadisticas.getSugerencias());
+				
+				logger.info("Iniciando sesion como administrador ( user=" + admin.getUsuario() + ")");
 				return "dashboard";
 			} else {
 
@@ -147,21 +147,24 @@ public class DashboardController {
 						password);
 				if (ciudadano == null && admin == null) {
 					modelo.addAttribute("err", "Usuario no encontrado");
-					return "login";
+					return "dashlogin";
 				} else {
 					session.setAttribute("user", ciudadano);
 					session.setAttribute("tipo", "ciudadano");
 					modelo.addAttribute("user", ciudadano);
-					return "infoUsuario";
+					Actions.listarSugerencias(modelo, ciudadano);
+					session.setAttribute("admin", null);
+					return "listaSolicitudes";
 				}
 			}
 		} catch (BusinessException e) {
 			modelo.addAttribute("err", e.getMessage());
-			return "login";
+			return "dashlogin";
 		}
 	}
 
-	//
+	
+	
 	@RequestMapping(value = "/volverAinfo", method = RequestMethod.GET)
 	public String getParticipantInfo(HttpSession session, Model modelo,
 			@ModelAttribute("user") Citizen usuario) {
@@ -170,7 +173,10 @@ public class DashboardController {
 
 		return "infoUsuario";
 	}
-
+	@RequestMapping(value = "/oldlogin", method = RequestMethod.GET)
+	public String getParticipantInfo(HttpSession session) {
+		return "oldlogin";
+	}
 	/**
 	 * Metodo que permite navegar a la pagina para cambiar el email
 	 * 
@@ -298,29 +304,23 @@ public class DashboardController {
 		}
 	}
 
-	@RequestMapping("/enviarTestSugerencia")
-	public String send(Model model) {
-		estadisticas.añadirMensaje("Enviando sugerencia");
-		estadisticas.sendProposalMessagesCouncilstaff();
-		// kProducer.send("CREATE_SUGGESTION", );
-		return "dashboard";
-	}
-
+	
 	@RequestMapping("/limpiar")
 	public String limpiarMensajes(Model model){
 		estadisticas.limpiar();
+		return "dashcons";
+	}
+	@RequestMapping(value = "/consolaDashboard")
+	public String navegarDashboardConsola(Model modelo) {
+		modelo.addAttribute("mensajes", estadisticas.getMensajes());
+		return "dashcons";
+	}
+	@RequestMapping(value = "/inicioDashboard")
+	public String navegarDashboardInicio(Model modelo) {
+
+		modelo.addAttribute("sugerencias", estadisticas.getSugerencias());
 		return "dashboard";
 	}
-	@ModelAttribute("sugerencias")
-	public List<Sugerencia> getSugerencias() {
-		return estadisticas.getTopSugerencias();
-	}
-
-	@ModelAttribute("mensajes")
-	public List<String> getMensajes() {
-		return estadisticas.getMensajes();
-	}
-
 	public Estadisticas getEstadisticas() {
 		return estadisticas;
 	}
