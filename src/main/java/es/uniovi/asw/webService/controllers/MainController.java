@@ -52,7 +52,7 @@ public class MainController {
     public String Salir(HttpSession session,Model model) {
     	session.setAttribute("user", null);
     	session.setAttribute("admin", null);
-    	return "dashlogin";
+    	return "login";
     }
     
     @RequestMapping(value = "/listaSolicitudes", method = RequestMethod.POST)
