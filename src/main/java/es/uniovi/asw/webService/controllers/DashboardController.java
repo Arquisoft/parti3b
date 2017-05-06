@@ -1,14 +1,10 @@
 package es.uniovi.asw.webService.controllers;
 
-import java.sql.Date;
-
-
 import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
-import org.springframework.messaging.MessagingException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -16,29 +12,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-
-import es.uniovi.asw.business.CitizenService;
-import es.uniovi.asw.business.SystemService;
-import es.uniovi.asw.business.impl.CitizenServiceImpl;
-import es.uniovi.asw.business.impl.SystemServiceImpl;
+import es.uniovi.asw.business.Services;
 import es.uniovi.asw.model.Administrador;
 import es.uniovi.asw.model.Citizen;
 import es.uniovi.asw.model.exception.BusinessException;
-import es.uniovi.asw.util.Encriptador;
 import es.uniovi.asw.util.VerificadorEmail;
 
 @Controller
 @Scope("session")
 public class DashboardController {
 
-	private boolean test = false;
-	private Citizen testCitizen = new Citizen("NombreDeTest", "ApellidosDeTest",
-			"testemail@email", new Date(0), "C\\direccionDeTest", "Esp", "71905648",
-			"ciudadano1", "ciudadano");
-	private Administrador testAdmin = new Administrador("admin", "admin");
-
-	private static final Logger logger = Logger.getLogger(DashboardController.class);
+	private static final Logger logger = Logger
+			.getLogger(DashboardController.class);
 
 	@Autowired
 	private Estadisticas estadisticas;
@@ -58,18 +43,6 @@ public class DashboardController {
 
 	}
 
-	// @RequestMapping("/testUsuario")
-	// public String testUsuario(Model model, HttpSession session) {
-	// @SuppressWarnings("deprecation")
-	// Date fecha = new Date(0, 0, 0);
-	// Citizen user = new Citizen("testUser", Encriptador.encriptar("ss"),
-	// "email@test.com", "123T", "TestName", "TestApp", fecha,
-	// "C/test", "España");
-	// model.addAttribute("user", user);
-	// session.setAttribute("user", user);
-	// return "infoUsuario";
-	// }
-
 	/**
 	 * Metodo que gestion la peticion que permite loguearse
 	 * 
@@ -81,70 +54,29 @@ public class DashboardController {
 	 */
 	@RequestMapping(value = "/entrar", method = RequestMethod.POST)
 	public String getParticipantInfo(HttpSession session, Model modelo,
-			@RequestParam String nombre, @RequestParam String password) throws BusinessException {
+			@RequestParam String nombre, @RequestParam String password)
+			throws BusinessException {
 
-		/******************
-		 * TEST ************************
-		 * 
-		 * Test administrador para acceder a dashboard sin BD : Usuario: admin
-		 * Password: admin
-		 * 
-		 * Test ciudadano para acceder a informacion sin BD: Usuario: ciudadano
-		 * Password: ciudadano
-		 * 
-		 * */
-	
-		
-		if (test) {
-			if (nombre.equals(testAdmin.getUsuario())
-					&& password.equals(testAdmin.getPassword())) {
-				logger.info("Iniciando sesion como admin de pruebas");
-				session.setAttribute("user", testAdmin);
-				session.setAttribute("tipo", "admin");
-				
-
-				modelo.addAttribute("sugerencias", estadisticas.getSugerencias());
-				
-				return "dashboard";
-
-			} else if (nombre.equals(testCitizen.getUsuario())
-					&& password.equals(testCitizen.getPassword())) {
-
-				logger.info("Iniciando sesion como usuario de pruebas");
-				session.setAttribute("user", testCitizen);
-				session.setAttribute("tipo", "ciudadano");
-				modelo.addAttribute("user", testCitizen);
-				return "infoUsuario";
-			} else {
-				modelo.addAttribute("err", "Usuario no encontrado");
-				return "dashlogin";
-			}
-		}
-		
-		/*******************************************************
-		 * 	El codigo anterior permite realizar pruebas, 
-		 * 	el codigo siguiente sigue el funcionamiento correcto.
-		 * ******************************************************/
 		if (nombre.length() <= 0 || password.length() <= 0) {
 			modelo.addAttribute("err", "Complete todos los campos");
 			return "dashlogin";
 		}
 
 		try {
-			SystemService sService = new SystemServiceImpl();
-			Administrador admin = sService.findAdminByUserAndPass(nombre, password);
+			Administrador admin = Services.getSystemServices()
+					.findAdminByUserAndPass(nombre, password);
 			if (admin != null) {
 				session.setAttribute("user", admin);
 				session.setAttribute("tipo", "admin");
-				
-				modelo.addAttribute("sugerencias", estadisticas.getSugerencias());
-				
-				logger.info("Iniciando sesion como administrador ( user=" + admin.getUsuario() + ")");
+				Actions.listarSugerencias(modelo, null);
+
+				logger.info("Iniciando sesion como administrador ( user="
+						+ admin.getUsuario() + ")");
 				return "dashboard";
 			} else {
 
-				Citizen ciudadano = sService.findCitizenByUserAndPass(nombre,
-						password);
+				Citizen ciudadano = Services.getSystemServices()
+						.getParticipant(nombre, password);
 				if (ciudadano == null && admin == null) {
 					modelo.addAttribute("err", "Usuario no encontrado");
 					return "dashlogin";
@@ -163,8 +95,6 @@ public class DashboardController {
 		}
 	}
 
-	
-	
 	@RequestMapping(value = "/volverAinfo", method = RequestMethod.GET)
 	public String getParticipantInfo(HttpSession session, Model modelo,
 			@ModelAttribute("user") Citizen usuario) {
@@ -173,10 +103,12 @@ public class DashboardController {
 
 		return "infoUsuario";
 	}
+
 	@RequestMapping(value = "/oldlogin", method = RequestMethod.GET)
 	public String getParticipantInfo(HttpSession session) {
 		return "oldlogin";
 	}
+
 	/**
 	 * Metodo que permite navegar a la pagina para cambiar el email
 	 * 
@@ -201,32 +133,27 @@ public class DashboardController {
 	 * @return
 	 */
 	@RequestMapping(value = "/cambioEmail", method = RequestMethod.POST)
-	public String changeEmail(HttpSession session, Model modelo,
+	public String cambiarEmail(HttpSession session, Model modelo,
 			@ModelAttribute("user") Citizen usuario,
 			@RequestParam String password, @RequestParam String newEmail) {
-		CitizenService cService = new CitizenServiceImpl();
-		Citizen user = (Citizen) session.getAttribute("user");
 
+		Citizen user = (Citizen) session.getAttribute("user");
 		try {
-			if ((test && password.equals("ciudadano"))
-					|| password.equals(Encriptador.desencriptar(user
-							.getPassword()))) {
+			if (password.equals(user.getPassword())) {
 
 				if (!VerificadorEmail.validateEmail(newEmail)) {
 					modelo.addAttribute("err", "Email incorrecto");
 					return "cambiarEmail";
-				}
+				} else
+					modelo.addAttribute("err", "");
+				user.setEmail(newEmail);
 
-				modelo.addAttribute("err", "");
-				if (!test)
-					cService.changeEmail(user, newEmail);
-				else
-					user.setEmail(newEmail);
+				changeInfo(user);
 
 				session.setAttribute("user", user);
 				modelo.addAttribute("success",
 						"Se ha actualizado el email correctamente");
-				logger.info("Se ha actualizado el email correctamente");
+
 				return "exito";
 
 			} else {
@@ -245,7 +172,7 @@ public class DashboardController {
 	}
 
 	//
-	
+
 	@RequestMapping(value = "/cambiarP")
 	public String navegarCambiarContrasena(Model modelo,
 			@ModelAttribute("user") Citizen usuario) {
@@ -254,22 +181,31 @@ public class DashboardController {
 		return "cambiarPass";
 	}
 
-	//
-	//
+	/**
+	 * Metodo que se encarga de cambiar la contraseña
+	 * 
+	 * @param session
+	 * @param modelo
+	 * @param usuario
+	 *            : usuario
+	 * @param password
+	 *            : contraseña vieja
+	 * @param newPassword1
+	 *            : contraseña nueva
+	 * @param newPassword2
+	 *            : contraseña nueva repetida
+	 * @return
+	 */
 	@RequestMapping(value = "/cambio", method = RequestMethod.POST)
 	public String changePassword(HttpSession session, Model modelo,
 			@ModelAttribute("user") Citizen usuario,
 			@RequestParam String password, @RequestParam String newPassword1,
 			@RequestParam String newPassword2) {
-		CitizenService cService = new CitizenServiceImpl();
+
 		Citizen user = (Citizen) session.getAttribute("user");
 		try {
 
-			if (!password.equals(Encriptador.desencriptar(user.getPassword())) && !test) {
-				modelo.addAttribute("err", "Contraseña incorrecta");
-				return "cambiarPass";
-			}
-			if(test && !testCitizen.getPassword().equals(password)){
+			if (!password.equals(user.getPassword())) {
 				modelo.addAttribute("err", "Contraseña incorrecta");
 				return "cambiarPass";
 			}
@@ -283,12 +219,10 @@ public class DashboardController {
 			}
 
 			modelo.addAttribute("err", "");
-			if(!test)
-				cService.changePassword(user, newPassword1);
-			else {
-				user.setPassword(newPassword1);
-			}
-			
+			user.setPassword(newPassword1);
+
+			changeInfo(user);
+
 			modelo.addAttribute("err", "");
 			modelo.addAttribute("user", user);
 			session.setAttribute("user", user);
@@ -304,24 +238,45 @@ public class DashboardController {
 		}
 	}
 
-	
 	@RequestMapping("/limpiar")
-	public String limpiarMensajes(Model model){
+	public String limpiarMensajes(Model model) {
 		estadisticas.limpiar();
 		return "dashcons";
 	}
+
 	@RequestMapping(value = "/consolaDashboard")
 	public String navegarDashboardConsola(Model modelo) {
 		modelo.addAttribute("mensajes", estadisticas.getMensajes());
 		return "dashcons";
 	}
-	@RequestMapping(value = "/inicioDashboard")
-	public String navegarDashboardInicio(Model modelo) {
 
+	@RequestMapping(value = "/inicioDashboard")
+	public String navegarDashboardInicio(Model modelo) throws BusinessException {
+		Actions.listarSugerencias(modelo, null);
 		modelo.addAttribute("sugerencias", estadisticas.getSugerencias());
 		return "dashboard";
 	}
+
+
+	@RequestMapping(value = "/irAParticipationSystem")
+	public String navegarAparticipationSystem(HttpSession session,
+			Model modelo) throws BusinessException {
+		Actions.listarSugerencias(modelo, null);
+		
+		session.setAttribute("user", null);
+		
+		 return "listaSolicitudesadmin";
+	
+	}
+
 	public Estadisticas getEstadisticas() {
 		return estadisticas;
+	}
+
+	private void changeInfo(Citizen user) throws BusinessException {
+
+		Services.getCitizenServices().updateInfo(user);
+
+		logger.info("Se ha actualizado el usuario correctamente");
 	}
 }

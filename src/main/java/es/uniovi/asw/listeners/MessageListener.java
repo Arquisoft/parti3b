@@ -62,10 +62,12 @@ public class MessageListener {
     
     
     @KafkaListener(topics = Topics.VOTE_SUGGESTION)
-    public void voteSuggPositive(String data) {
+    public void voteSuggestion(String data) {
     	VotoSugerencia voto = Message.getVotoSugerenciaFromJSON(data);
     	
+    	estadisticas.enviarVotoATablaAdmin(voto);	
         estadisticas.enviarAConsolaAdmin("[VOTAR SUGERENCIA] Autor de la accion [id="+voto.getCitizen().getId()+"] " +
+       
         voto.getCitizen().getNombre() + " en sugerencia: [id="+voto.getSugerencia().getId()+"]"+ voto.getSugerencia().getTitulo());
         
         logger.info("[VOTAR SUGERENCIA] Autor de la accion [id="+voto.getCitizen().getId()+"] " +

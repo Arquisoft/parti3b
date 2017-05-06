@@ -65,20 +65,12 @@ public class CitizenServiceImpl extends SuperService implements CitizenService {
 	}
 
 	@Override
-	public void changePassword(Citizen user, String newPassword) throws BusinessException {
+	public void updateInfo(Citizen user) throws BusinessException {
 	
 		if(CitizenFinder.findByDNI(user.getDNI())!=null){
-			user.setPassword(Encriptador.encriptar(newPassword));
 			cmd.execute(new UpdateCitizen(user));
 		}
 	}
 
-	@Override
-	public void changeEmail(Citizen user, String email) throws BusinessException {
-		if(CitizenFinder.findByDNI(user.getDNI())!=null){
-			user.setEmail(email);
-			cmd.execute(new UpdateCitizen(user));
-		}
-	}
 	
 }

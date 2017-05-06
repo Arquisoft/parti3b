@@ -25,7 +25,7 @@ public interface CitizenService {
 
 	public Comentario findComentarioById(Long id) throws BusinessException;
 	
-	public void changePassword(Citizen user, String newPassword) throws BusinessException;
+	public void updateInfo(Citizen user) throws BusinessException;
 
-	public void changeEmail(Citizen user, String email) throws BusinessException;
+
 }

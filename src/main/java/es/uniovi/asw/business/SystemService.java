@@ -26,4 +26,5 @@ public interface SystemService {
 
 	public List<Sugerencia> findSugerenciasByUserId(Long id) throws BusinessException;
 
+	public Citizen getParticipant(String usuario, String password) throws BusinessException;
 }
