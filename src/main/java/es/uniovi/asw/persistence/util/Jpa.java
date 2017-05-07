@@ -86,6 +86,12 @@ public class Jpa {
 		properties.put("javax.persistence.jdbc.password", password);
 		properties.put("javax.persistence.jdbc.driver", "org.postgresql.Driver");
 
+		MyLogger.debug("Usuario ----> " + userName);
+		MyLogger.debug("Contraseña ----> " + password);
+		MyLogger.debug("Host ----> " + host);
+		MyLogger.debug("`Puerto ---> " + port);
+		MyLogger.debug("Nombre de la base de datos ----> " + databaseName);
+
 		return properties;
 	}
 
