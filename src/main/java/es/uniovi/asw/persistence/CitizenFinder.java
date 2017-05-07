@@ -4,7 +4,7 @@ import java.util.List;
 
 import es.uniovi.asw.model.Citizen;
 import es.uniovi.asw.persistence.util.Jpa;
-import es.uniovi.asw.util.Encriptador;
+
 
 public class CitizenFinder {
 

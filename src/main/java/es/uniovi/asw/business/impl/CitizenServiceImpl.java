@@ -17,7 +17,7 @@ import es.uniovi.asw.model.VotoComentario;
 import es.uniovi.asw.model.VotoSugerencia;
 import es.uniovi.asw.model.exception.BusinessException;
 import es.uniovi.asw.persistence.CitizenFinder;
-import es.uniovi.asw.util.Encriptador;
+
 
 public class CitizenServiceImpl extends SuperService implements CitizenService {
 	
