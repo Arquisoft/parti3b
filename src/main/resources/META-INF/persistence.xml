@@ -4,21 +4,32 @@
     http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
 	version="2.0">
 
-	<persistence-unit name="citizens">
-		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-		<exclude-unlisted-classes>false</exclude-unlisted-classes>
+	<persistence-unit name="citizens" transaction-type="RESOURCE_LOCAL">
+		<!--<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider> -->
+		<!-- <exclude-unlisted-classes>false</exclude-unlisted-classes> -->
 
 		<properties>
 			<property name="javax.persistence.schema-generation.database.action"
 				value="drop-and-create" />
+
+
 			<property name="javax.persistence.schema-generation.create-source"
 				value="metadata" />
 			<property name="javax.persistence.schema-generation.drop-source"
 				value="metadata" />
-			<!-- <property name="javax.persistence.sql-load-script-source"
-				value="META-INF/sql/data.sql" /> -->
-			<property name="eclipselink.logging.file" value="eclipselink.log" />
-			<property name="eclipselink.logging.level" value="FINE" />
+
+			<property name="javax.persistence.sql-load-script-source"
+				value="META-INF/sql/data.sql" />
+
+
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+			<property name="hybernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+
+
+			<!-- ========================================= -->
+
+			<!-- <property name="eclipselink.logging.file" value="eclipselink.log" 
+				/> <property name="eclipselink.logging.level" value="FINE" /> -->
 
 			<!-- HSQLDB -->
 			<!-- <property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver" 
@@ -27,7 +38,7 @@
 				/> -->
 			<!-- <property name="javax.persistence.jdbc.user" value="sa" /> -->
 			<!-- <property name="javax.persistence.jdbc.password" value="" /> -->
-			
+
 			<!-- MYSQL -->
 			<!-- <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" 
 				/> -->
@@ -36,7 +47,7 @@
 			<!-- <property name="javax.persistence.jdbc.user" value="sql8158103" /> -->
 			<!-- <property name="javax.persistence.jdbc.password" value="4ka69AzUvi" 
 				/> -->
-				
+
 			<!-- H2 -->
 			<!-- <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" 
 				/> -->
@@ -44,7 +55,7 @@
 				/> -->
 			<!-- <property name="javax.persistence.jdbc.user" value="sa" /> -->
 			<!-- <property name="javax.persistence.jdbc.password" value="" /> -->
-			
+
 			<!-- POSTGRES -->
 			<!-- Se hace programáticamente -->
 		</properties>
