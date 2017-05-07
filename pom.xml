@@ -224,7 +224,7 @@
 		        <configuration>
 		  		<appName>asw3b</appName>
 			  		 <processTypes>
-			    		 <web>java $JAVA_OPTS -cp target/classes:target/dependency/* Application</web>
+			    		 <web>java $JAVA_OPTS -cp target/classes:target/dependency/* src.main.java.es.uniovi.asw.Application</web>
 			  		</processTypes>
 				</configuration>
     		 </plugin>	

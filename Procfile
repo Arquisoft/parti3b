@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT -Dspring.config.location=target/classes/heroku.properties $JAVA_OPTS -jar target/participationSystem3b-0.0.1.jar
+web: java -cp target/classes/;target/dependency/* src.main.java.es.uniovi.asw.Application
