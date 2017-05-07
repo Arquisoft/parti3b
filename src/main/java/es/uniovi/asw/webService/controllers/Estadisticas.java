@@ -17,6 +17,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 
 import es.uniovi.asw.business.Services;
+import es.uniovi.asw.infrastructure.MyLogger;
 import es.uniovi.asw.model.*;
 import es.uniovi.asw.model.exception.BusinessException;
 import es.uniovi.asw.util.clasesSimples.*;
@@ -44,8 +45,9 @@ public class Estadisticas {
 	@MessageMapping("wsocket")
 	@SendTo("/topic/sugerencias")
 	private List<Sugerencia> cargarSugerencias() throws BusinessException {
-		
+		MyLogger.debug("Buscando sugerencias!");
 		sugerencias= Services.getSystemServices().findAllSugerencias();
+		MyLogger.debug("Termine la busqueda de sugerencias!");
 		return sugerencias;
 	}
 	
