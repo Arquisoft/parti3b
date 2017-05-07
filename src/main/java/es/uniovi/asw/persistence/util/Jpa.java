@@ -14,12 +14,13 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+import es.uniovi.asw.infrastructure.MyLogger;
+
 public class Jpa {
 
 	private static EntityManagerFactory emf = null;
-	private static ThreadLocal<EntityManager> emThread = 
-		new ThreadLocal<EntityManager>();
-	
+	private static ThreadLocal<EntityManager> emThread = new ThreadLocal<EntityManager>();
+
 	public static EntityManager createEntityManager() {
 		EntityManager entityManager = getEmf().createEntityManager();
 		emThread.set(entityManager);
@@ -31,7 +32,7 @@ public class Jpa {
 	}
 
 	private static EntityManagerFactory getEmf() {
-		if (emf == null){
+		if (emf == null) {
 			String persistenceUnitName = loadPersistentUnitName();
 			emf = Persistence.createEntityManagerFactory(persistenceUnitName);
 		}
@@ -43,11 +44,14 @@ public class Jpa {
 			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 			DocumentBuilder db = dbf.newDocumentBuilder();
 			Document doc = db.parse(Jpa.class.getResourceAsStream("/META-INF/persistence.xml"));
+			MyLogger.debug("====> Estoy sacando unidad de pesistencia");
+			
 
 			doc.getDocumentElement().normalize();
 			NodeList nl = doc.getElementsByTagName("persistence-unit");
+			MyLogger.debug("Nombre unidad: " + ((Element) nl.item(0)).getAttribute("name"));
 			
-			return ((Element)nl.item(0)).getAttribute("name");
+			return ((Element) nl.item(0)).getAttribute("name");
 
 		} catch (ParserConfigurationException e1) {
 			throw new RuntimeException(e1);
