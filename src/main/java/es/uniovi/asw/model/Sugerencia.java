@@ -22,10 +22,13 @@ import es.uniovi.asw.persistence.util.Jpa;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-@SuppressWarnings("serial")
+
 @Entity
 @Table(name="TSUGERENCIA")
 public class Sugerencia implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
+	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY) @Expose private long id;
 	@ManyToOne @Expose
 	@JsonIgnore

@@ -13,12 +13,15 @@ import com.google.gson.annotations.Expose;
 
 import es.uniovi.asw.model.types.VotosSugerenciasKey;
 
-@SuppressWarnings("serial")
+
 @Entity
 @IdClass(VotosSugerenciasKey.class)
 @Table(name="TVOTOSUGERENCIA")
 public class VotoSugerencia implements Serializable{
 
+	
+	private static final long serialVersionUID = 1L;
+	
 	@Id @ManyToOne @Expose private Sugerencia sugerencia;
 	@Id @ManyToOne @Expose private Citizen citizen;
 	@Expose private boolean isAFavor;

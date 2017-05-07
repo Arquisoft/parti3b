@@ -16,10 +16,13 @@ import com.google.gson.annotations.Expose;
 
 import es.uniovi.asw.persistence.util.Jpa;
 
-@SuppressWarnings("serial")
+
 @Entity
 @Table(name="TCOMENTARIO")
 public class Comentario implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
+	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY) @Expose private long id;
 	@ManyToOne @Expose
 	private Citizen citizen;

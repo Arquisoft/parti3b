@@ -23,10 +23,13 @@ import com.google.gson.annotations.Expose;
 
 import es.uniovi.asw.model.exception.BusinessException;
 
-@SuppressWarnings("serial")
+
 @Entity
 @Table(name="TCATEGORIA")
 public class Categoria implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
+	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY) @Expose private long id;
 	@OneToMany(mappedBy="categoria") 
 	private Set<Sugerencia> sugerencias = new HashSet<>();
