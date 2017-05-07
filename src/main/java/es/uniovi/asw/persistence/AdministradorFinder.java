@@ -4,6 +4,7 @@ import java.util.List;
 
 import es.uniovi.asw.model.Administrador;
 import es.uniovi.asw.persistence.util.Jpa;
+import es.uniovi.asw.util.Encriptador;
 
 public class AdministradorFinder {
 	

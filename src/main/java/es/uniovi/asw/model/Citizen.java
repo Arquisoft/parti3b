@@ -17,13 +17,10 @@ import javax.validation.constraints.NotNull;
 
 import com.google.gson.annotations.Expose;
 
-
+@SuppressWarnings("serial")
 @Entity
 @Table(name="TCITIZENS")
 public class Citizen implements Serializable{
-	
-
-	private static final long serialVersionUID = 1L;
 	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY) @Expose private long id;
 	@Expose private String nombre;
