@@ -69,6 +69,7 @@ public class Jpa {
 
 		StringTokenizer st = new StringTokenizer(databaseUrl, ":@/");
 
+		st.nextToken();
 		String userName = st.nextToken();
 		String password = st.nextToken();
 		String host = st.nextToken();
