@@ -1,1 +1,1 @@
-web: java -cp target/classes/;target/dependency/* src.main.java.es.uniovi.asw.Application
+web: java $JAVA_OPTS -Dserver.port=$PORT -jar target/*.jar  
