@@ -47,6 +47,7 @@ xmlns:p="http://primefaces.org/ui">
                  	 	<td align="center"> ${sugerencia.autor} </td>
                   		<td align="center"> ${sugerencia.pos}</td>
                    		<td align="center"> ${sugerencia.neg}</td>
+                   		<td align="center"> ${sugerencia.estado}</td> 
 					</tr>
 					`;
 					 
@@ -73,10 +74,10 @@ xmlns:p="http://primefaces.org/ui">
 			stompClient.subscribe("/topic/voto", function(data) {
 				window.location.reload();
 					var voto = JSON.parse(data.body);
-					$(".idSug").each(function(i) {
+					$("#idSug").each(function(i) {
 						if (this.innerHTML === voto.sugerenciaId) {
 							if(voto.aFavor){
-								$(this).next().next().next().html("" + (voto.nPositivos));
+								$(this).next().next().next().attr("text", voto.nPositivos);
 							}
 							if(!voto.aFavor){
 								$(this).next().next().next().next().html("" + (voto.nNegativos));
@@ -90,7 +91,24 @@ xmlns:p="http://primefaces.org/ui">
 	});
 	
 	</script>
+<script>
+	$(document).ready(function() {
+		var tabla = $("#tablaSug");
+		var socket = new SockJS('/wsocket');
 
+		var stompClient = Stomp.over(socket);
+		
+	    stompClient.connect({ }, function(frame) {
+			stompClient.subscribe("/topic/eliminada", function(data) {
+				window.location.reload();
+								
+			});
+	    });
+	
+	     
+	});
+	
+	</script>
   </head>
 
   <body>
@@ -143,6 +161,8 @@ xmlns:p="http://primefaces.org/ui">
                   <th>Autor</th>
                   <th><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>  Likes</th>
                   <th><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>  Dislikes</th>
+                  <th><span class="glyphicon glyphicon-scale" aria-hidden="true"></span>  Estado</th>
+                  	
                 </tr>
               </thead>
               <tbody>
@@ -152,6 +172,7 @@ xmlns:p="http://primefaces.org/ui">
                   <td th:text="${item.citizen.usuario}" align="center"></td>
                   <td th:text="${item.getPosVotes()}" align="center"></td>
                   <td th:text="${item.getNegVotes()}" align="center"></td>
+                  <td th:text="${item.getEstado()}" align="center"></td>
                 </tr>
               </tbody>
             </table>

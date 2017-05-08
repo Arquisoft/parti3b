@@ -7,4 +7,6 @@ public class Topics {
 	
 	public final static String COMMENT_SUGGESTION = "COMMENT_SUGGESTION";
 	public final static String VOTE_COMMENT = "VOTE_COMMENT";
+	
+	public final static String DELETE_SUGGESTION = "DELETE_SUGGESTION";
 }

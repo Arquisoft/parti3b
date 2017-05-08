@@ -18,7 +18,7 @@ public class CitizenFinder {
 	}
 
 	public static Object findByUserAndPass(String user, String pass) {
-		List<Citizen> result= Jpa.getManager().createNamedQuery("Citizen.findByUserAndPass", Citizen.class).
+			List<Citizen> result= Jpa.getManager().createNamedQuery("Citizen.findByUserAndPass", Citizen.class).
 				setParameter(1, user).setParameter(2, pass).getResultList();
 		
 		if (result.isEmpty())

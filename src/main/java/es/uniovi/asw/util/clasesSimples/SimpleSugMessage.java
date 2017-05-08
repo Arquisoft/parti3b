@@ -8,6 +8,7 @@ public class SimpleSugMessage{
 	private String titulo;
 	private int pos;
 	private int neg;
+	private String estado;
 	
 	public SimpleSugMessage(Sugerencia sug){
 		id=sug.getId();
@@ -15,8 +16,19 @@ public class SimpleSugMessage{
 		titulo = sug.getTitulo();
 		pos=sug.getPosVotes();
 		neg = sug.getNegVotes();
+		estado= String.valueOf(sug.getEstado());
 	}
 	
+
+	public String getEstado() {
+		return estado;
+	}
+
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+
 
 	public String getTitulo() {
 		return titulo;

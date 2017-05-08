@@ -55,6 +55,7 @@ public class MessageListener {
         
         estadisticas.enviarAConsolaAdmin("[ELIMINAR SUGERENCIA] Autor de la accion [id="+sugg.getCitizen().getId()+"] " + sugg.getCitizen().getNombre() + 
         		"  [id=" + sugg.getId() + "] " + sugg.getTitulo());
+        estadisticas.sugerenciaEliminada();
         
         logger.info("[ELIMINAR SUGERENCIA] Autor de la accion [id="+sugg.getCitizen().getId()+"] " + sugg.getCitizen().getNombre() + 
         		"  [id=" + sugg.getId() + "] " + sugg.getTitulo());
@@ -86,15 +87,7 @@ public class MessageListener {
         comentario.getCitizen().getNombre()+ " en la sugerencia: [id=" + comentario.getSugerencia().getId()+"]" + comentario.getSugerencia().getTitulo());
     }
     
-//    @KafkaListener(topics =  "DELETE_COMMENT")
-//    public void deleteComment(String data) {
-//    	Comentario comentario = Message.getComentarioFromJSON(data);
-//        logger.info("New message received: [ELIMINAR COMENTARIO]  \"" +  data + "\"");
-//        
-//        logger.info("[ELIMINAR COMENTARIO] Autor del comentario [id="+ comentario.getCitizen().getId()+"] " +
-//        comentario.getCitizen().getNombre()+ " en la sugerencia: " + comentario.getSugerencia());
-//    }
-
+    
     @KafkaListener(topics = Topics.VOTE_COMMENT)
     public void voteComment(String data) {
     	VotoComentario votoComentario = Message.getVotoComentarioFromJSON(data);

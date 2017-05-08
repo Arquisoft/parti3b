@@ -123,6 +123,16 @@ public class Estadisticas {
 		this.sugerencias = sugerencias;
 	}
 
+	public void sugerenciaEliminada()  {
+		try {
+			template.convertAndSend("/topic/eliminada", new ObjectMapper().writeValueAsString(true));
+		} catch (MessagingException | JsonProcessingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
 }
 	
 
