@@ -66,10 +66,7 @@ public class CitizenServiceImpl extends SuperService implements CitizenService {
 
 	@Override
 	public void updateInfo(Citizen user) throws BusinessException {
-	
-		if(CitizenFinder.findByUserAndPass(user.getUsuario(), user.getPassword())!=null){
 			cmd.execute(new UpdateCitizen(user));
-		}
 	}
 
 	

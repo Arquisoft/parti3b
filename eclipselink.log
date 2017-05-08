@@ -1,745 +1,739 @@
-[EL Fine]: server: 2017-05-05 22:53:43.839--Thread(Thread[restartedMain,5,main])--Configured server platform: org.eclipse.persistence.platform.server.NoServerPlatform
-[EL Config]: metadata: 2017-05-05 22:53:44.343--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The access type for the persistent class [class es.uniovi.asw.model.Sugerencia] is set to [FIELD].
-[EL Config]: metadata: 2017-05-05 22:53:44.348--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The target entity (reference) class for the many to one mapping element [field citizen] is being defaulted to: class es.uniovi.asw.model.Citizen.
-[EL Config]: metadata: 2017-05-05 22:53:44.351--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The target entity (reference) class for the many to one mapping element [field categoria] is being defaulted to: class es.uniovi.asw.model.Categoria.
-[EL Config]: metadata: 2017-05-05 22:53:44.351--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The target entity (reference) class for the one to many mapping element [field votos] is being defaulted to: class es.uniovi.asw.model.VotoSugerencia.
-[EL Config]: metadata: 2017-05-05 22:53:44.352--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The target entity (reference) class for the one to many mapping element [field comentarios] is being defaulted to: class es.uniovi.asw.model.Comentario.
-[EL Config]: metadata: 2017-05-05 22:53:44.352--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The access type for the persistent class [class es.uniovi.asw.model.Comentario] is set to [FIELD].
-[EL Config]: metadata: 2017-05-05 22:53:44.352--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The target entity (reference) class for the many to one mapping element [field citizen] is being defaulted to: class es.uniovi.asw.model.Citizen.
-[EL Config]: metadata: 2017-05-05 22:53:44.352--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The target entity (reference) class for the one to many mapping element [field votos] is being defaulted to: class es.uniovi.asw.model.VotoComentario.
-[EL Config]: metadata: 2017-05-05 22:53:44.353--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The target entity (reference) class for the many to one mapping element [field sugerencia] is being defaulted to: class es.uniovi.asw.model.Sugerencia.
-[EL Config]: metadata: 2017-05-05 22:53:44.353--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The access type for the persistent class [class es.uniovi.asw.model.Categoria] is set to [FIELD].
-[EL Config]: metadata: 2017-05-05 22:53:44.353--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The target class (reference) class for the element collection mapping element [field palabrasNoPermitidas] is being defaulted to: class java.lang.String.
-[EL Config]: metadata: 2017-05-05 22:53:44.354--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The target entity (reference) class for the one to many mapping element [field sugerencias] is being defaulted to: class es.uniovi.asw.model.Sugerencia.
-[EL Config]: metadata: 2017-05-05 22:53:44.354--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The access type for the persistent class [class es.uniovi.asw.model.VotoComentario] is set to [FIELD].
-[EL Config]: metadata: 2017-05-05 22:53:44.354--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The element [field citizen] is being defaulted to a one to one mapping.
-[EL Config]: metadata: 2017-05-05 22:53:44.354--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The target entity (reference) class for the many to one mapping element [field citizen] is being defaulted to: class es.uniovi.asw.model.Citizen.
-[EL Config]: metadata: 2017-05-05 22:53:44.355--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The element [field comentario] is being defaulted to a one to one mapping.
-[EL Config]: metadata: 2017-05-05 22:53:44.355--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The target entity (reference) class for the many to one mapping element [field comentario] is being defaulted to: class es.uniovi.asw.model.Comentario.
-[EL Config]: metadata: 2017-05-05 22:53:44.355--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The access type for the persistent class [class es.uniovi.asw.model.VotoSugerencia] is set to [FIELD].
-[EL Config]: metadata: 2017-05-05 22:53:44.355--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The element [field citizen] is being defaulted to a one to one mapping.
-[EL Config]: metadata: 2017-05-05 22:53:44.355--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The target entity (reference) class for the many to one mapping element [field citizen] is being defaulted to: class es.uniovi.asw.model.Citizen.
-[EL Config]: metadata: 2017-05-05 22:53:44.355--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The element [field sugerencia] is being defaulted to a one to one mapping.
-[EL Config]: metadata: 2017-05-05 22:53:44.355--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The target entity (reference) class for the many to one mapping element [field sugerencia] is being defaulted to: class es.uniovi.asw.model.Sugerencia.
-[EL Config]: metadata: 2017-05-05 22:53:44.355--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The access type for the persistent class [class es.uniovi.asw.model.Administrador] is set to [FIELD].
-[EL Config]: metadata: 2017-05-05 22:53:44.356--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The access type for the persistent class [class es.uniovi.asw.model.Citizen] is set to [FIELD].
-[EL Config]: metadata: 2017-05-05 22:53:44.356--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The target entity (reference) class for the one to many mapping element [field votosComentarios] is being defaulted to: class es.uniovi.asw.model.VotoComentario.
-[EL Config]: metadata: 2017-05-05 22:53:44.356--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The target entity (reference) class for the one to many mapping element [field votosSugerencias] is being defaulted to: class es.uniovi.asw.model.VotoSugerencia.
-[EL Config]: metadata: 2017-05-05 22:53:44.356--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The target entity (reference) class for the one to many mapping element [field sugerencias] is being defaulted to: class es.uniovi.asw.model.Sugerencia.
-[EL Config]: metadata: 2017-05-05 22:53:44.356--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The target entity (reference) class for the one to many mapping element [field comentarios] is being defaulted to: class es.uniovi.asw.model.Comentario.
-[EL Config]: metadata: 2017-05-05 22:53:44.357--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The alias name for the entity class [class es.uniovi.asw.model.Sugerencia] is being defaulted to: Sugerencia.
-[EL Config]: metadata: 2017-05-05 22:53:44.367--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The column name for element [contenido] is being defaulted to: CONTENIDO.
-[EL Config]: metadata: 2017-05-05 22:53:44.368--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The column name for element [estado] is being defaulted to: ESTADO.
-[EL Config]: metadata: 2017-05-05 22:53:44.368--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The column name for element [titulo] is being defaulted to: TITULO.
-[EL Config]: metadata: 2017-05-05 22:53:44.369--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The column name for element [id] is being defaulted to: ID.
-[EL Config]: metadata: 2017-05-05 22:53:44.369--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The alias name for the entity class [class es.uniovi.asw.model.Comentario] is being defaulted to: Comentario.
-[EL Config]: metadata: 2017-05-05 22:53:44.369--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The column name for element [contenido] is being defaulted to: CONTENIDO.
-[EL Config]: metadata: 2017-05-05 22:53:44.369--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The column name for element [id] is being defaulted to: ID.
-[EL Config]: metadata: 2017-05-05 22:53:44.369--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The alias name for the entity class [class es.uniovi.asw.model.Categoria] is being defaulted to: Categoria.
-[EL Config]: metadata: 2017-05-05 22:53:44.37--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The column name for element [fechaInicio] is being defaulted to: FECHAINICIO.
-[EL Config]: metadata: 2017-05-05 22:53:44.37--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The column name for element [minimoVotos] is being defaulted to: MINIMOVOTOS.
-[EL Config]: metadata: 2017-05-05 22:53:44.37--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The column name for element [id] is being defaulted to: ID.
-[EL Config]: metadata: 2017-05-05 22:53:44.371--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The column name for element [nombre] is being defaulted to: NOMBRE.
-[EL Config]: metadata: 2017-05-05 22:53:44.371--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The column name for element [fechaFin] is being defaulted to: FECHAFIN.
-[EL Config]: metadata: 2017-05-05 22:53:44.371--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The alias name for the entity class [class es.uniovi.asw.model.VotoComentario] is being defaulted to: VotoComentario.
-[EL Config]: metadata: 2017-05-05 22:53:44.372--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The column name for element [isAFavor] is being defaulted to: ISAFAVOR.
-[EL Config]: metadata: 2017-05-05 22:53:44.372--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The alias name for the entity class [class es.uniovi.asw.model.VotoSugerencia] is being defaulted to: VotoSugerencia.
-[EL Config]: metadata: 2017-05-05 22:53:44.373--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The column name for element [isAFavor] is being defaulted to: ISAFAVOR.
-[EL Config]: metadata: 2017-05-05 22:53:44.373--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The alias name for the entity class [class es.uniovi.asw.model.Administrador] is being defaulted to: Administrador.
-[EL Config]: metadata: 2017-05-05 22:53:44.373--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The column name for element [password] is being defaulted to: PASSWORD.
-[EL Config]: metadata: 2017-05-05 22:53:44.373--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The column name for element [usuario] is being defaulted to: USUARIO.
-[EL Config]: metadata: 2017-05-05 22:53:44.373--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The column name for element [id] is being defaulted to: ID.
-[EL Config]: metadata: 2017-05-05 22:53:44.374--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The alias name for the entity class [class es.uniovi.asw.model.Citizen] is being defaulted to: Citizen.
-[EL Config]: metadata: 2017-05-05 22:53:44.374--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The column name for element [apellidos] is being defaulted to: APELLIDOS.
-[EL Config]: metadata: 2017-05-05 22:53:44.374--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The column name for element [fechaNacimiento] is being defaulted to: FECHANACIMIENTO.
-[EL Config]: metadata: 2017-05-05 22:53:44.374--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The column name for element [direccion] is being defaulted to: DIRECCION.
-[EL Config]: metadata: 2017-05-05 22:53:44.374--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The column name for element [nombre] is being defaulted to: NOMBRE.
-[EL Config]: metadata: 2017-05-05 22:53:44.374--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The column name for element [nacionalidad] is being defaulted to: NACIONALIDAD.
-[EL Config]: metadata: 2017-05-05 22:53:44.375--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The column name for element [password] is being defaulted to: PASSWORD.
-[EL Config]: metadata: 2017-05-05 22:53:44.375--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The column name for element [usuario] is being defaulted to: USUARIO.
-[EL Config]: metadata: 2017-05-05 22:53:44.375--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The column name for element [id] is being defaulted to: ID.
-[EL Config]: metadata: 2017-05-05 22:53:44.375--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The column name for element [email] is being defaulted to: EMAIL.
-[EL Config]: metadata: 2017-05-05 22:53:44.375--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The column name for element [DNI] is being defaulted to: DNI.
-[EL Config]: metadata: 2017-05-05 22:53:44.387--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The primary key column name for the mapping element [field citizen] is being defaulted to: ID.
-[EL Config]: metadata: 2017-05-05 22:53:44.387--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The foreign key column name for the mapping element [citizen] is being defaulted to: CITIZEN_ID.
-[EL Config]: metadata: 2017-05-05 22:53:44.387--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The primary key column name for the mapping element [field comentario] is being defaulted to: ID.
-[EL Config]: metadata: 2017-05-05 22:53:44.387--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The foreign key column name for the mapping element [comentario] is being defaulted to: COMENTARIO_ID.
-[EL Config]: metadata: 2017-05-05 22:53:44.387--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The primary key column name for the mapping element [field citizen] is being defaulted to: ID.
-[EL Config]: metadata: 2017-05-05 22:53:44.387--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The foreign key column name for the mapping element [citizen] is being defaulted to: CITIZEN_ID.
-[EL Config]: metadata: 2017-05-05 22:53:44.388--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The primary key column name for the mapping element [field sugerencia] is being defaulted to: ID.
-[EL Config]: metadata: 2017-05-05 22:53:44.388--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The foreign key column name for the mapping element [sugerencia] is being defaulted to: SUGERENCIA_ID.
-[EL Config]: metadata: 2017-05-05 22:53:44.395--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The primary key column name for the mapping element [field palabrasNoPermitidas] is being defaulted to: ID.
-[EL Config]: metadata: 2017-05-05 22:53:44.395--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The foreign key column name for the mapping element [palabrasNoPermitidas] is being defaulted to: Categoria_ID.
-[EL Config]: metadata: 2017-05-05 22:53:44.397--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The primary key column name for the mapping element [field citizen] is being defaulted to: ID.
-[EL Config]: metadata: 2017-05-05 22:53:44.397--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The foreign key column name for the mapping element [citizen] is being defaulted to: CITIZEN_ID.
-[EL Config]: metadata: 2017-05-05 22:53:44.398--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The primary key column name for the mapping element [field categoria] is being defaulted to: ID.
-[EL Config]: metadata: 2017-05-05 22:53:44.398--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The foreign key column name for the mapping element [categoria] is being defaulted to: CATEGORIA_ID.
-[EL Config]: metadata: 2017-05-05 22:53:44.398--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The primary key column name for the mapping element [field citizen] is being defaulted to: ID.
-[EL Config]: metadata: 2017-05-05 22:53:44.398--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The foreign key column name for the mapping element [citizen] is being defaulted to: CITIZEN_ID.
-[EL Config]: metadata: 2017-05-05 22:53:44.398--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The primary key column name for the mapping element [field sugerencia] is being defaulted to: ID.
-[EL Config]: metadata: 2017-05-05 22:53:44.398--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--The foreign key column name for the mapping element [sugerencia] is being defaulted to: SUGERENCIA_ID.
-[EL Info]: 2017-05-05 22:53:44.983--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--EclipseLink, version: Eclipse Persistence Services - 2.6.4.v20160829-44060b6
-[EL Fine]: connection: 2017-05-05 22:53:45.139--Thread(Thread[restartedMain,5,main])--Detected database platform: org.eclipse.persistence.platform.database.H2Platform
-[EL Config]: connection: 2017-05-05 22:53:45.147--ServerSession(1892283878)--Connection(295800185)--Thread(Thread[restartedMain,5,main])--connecting(DatabaseLogin(
+[EL Fine]: server: 2017-05-08 16:37:52.364--Thread(Thread[restartedMain,5,main])--Configured server platform: org.eclipse.persistence.platform.server.NoServerPlatform
+[EL Config]: metadata: 2017-05-08 16:37:53.014--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The access type for the persistent class [class es.uniovi.asw.model.Sugerencia] is set to [FIELD].
+[EL Config]: metadata: 2017-05-08 16:37:53.051--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The target entity (reference) class for the many to one mapping element [field citizen] is being defaulted to: class es.uniovi.asw.model.Citizen.
+[EL Config]: metadata: 2017-05-08 16:37:53.059--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The target entity (reference) class for the many to one mapping element [field categoria] is being defaulted to: class es.uniovi.asw.model.Categoria.
+[EL Config]: metadata: 2017-05-08 16:37:53.061--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The target entity (reference) class for the one to many mapping element [field votos] is being defaulted to: class es.uniovi.asw.model.VotoSugerencia.
+[EL Config]: metadata: 2017-05-08 16:37:53.065--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The target entity (reference) class for the one to many mapping element [field comentarios] is being defaulted to: class es.uniovi.asw.model.Comentario.
+[EL Config]: metadata: 2017-05-08 16:37:53.065--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The access type for the persistent class [class es.uniovi.asw.model.Comentario] is set to [FIELD].
+[EL Config]: metadata: 2017-05-08 16:37:53.066--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The target entity (reference) class for the many to one mapping element [field citizen] is being defaulted to: class es.uniovi.asw.model.Citizen.
+[EL Config]: metadata: 2017-05-08 16:37:53.067--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The target entity (reference) class for the one to many mapping element [field votos] is being defaulted to: class es.uniovi.asw.model.VotoComentario.
+[EL Config]: metadata: 2017-05-08 16:37:53.068--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The target entity (reference) class for the many to one mapping element [field sugerencia] is being defaulted to: class es.uniovi.asw.model.Sugerencia.
+[EL Config]: metadata: 2017-05-08 16:37:53.068--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The access type for the persistent class [class es.uniovi.asw.model.Categoria] is set to [FIELD].
+[EL Config]: metadata: 2017-05-08 16:37:53.069--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The target class (reference) class for the element collection mapping element [field palabrasNoPermitidas] is being defaulted to: class java.lang.String.
+[EL Config]: metadata: 2017-05-08 16:37:53.071--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The target entity (reference) class for the one to many mapping element [field sugerencias] is being defaulted to: class es.uniovi.asw.model.Sugerencia.
+[EL Config]: metadata: 2017-05-08 16:37:53.071--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The access type for the persistent class [class es.uniovi.asw.model.VotoComentario] is set to [FIELD].
+[EL Config]: metadata: 2017-05-08 16:37:53.072--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The element [field citizen] is being defaulted to a one to one mapping.
+[EL Config]: metadata: 2017-05-08 16:37:53.072--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The target entity (reference) class for the many to one mapping element [field citizen] is being defaulted to: class es.uniovi.asw.model.Citizen.
+[EL Config]: metadata: 2017-05-08 16:37:53.072--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The element [field comentario] is being defaulted to a one to one mapping.
+[EL Config]: metadata: 2017-05-08 16:37:53.073--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The target entity (reference) class for the many to one mapping element [field comentario] is being defaulted to: class es.uniovi.asw.model.Comentario.
+[EL Config]: metadata: 2017-05-08 16:37:53.073--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The access type for the persistent class [class es.uniovi.asw.model.VotoSugerencia] is set to [FIELD].
+[EL Config]: metadata: 2017-05-08 16:37:53.073--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The element [field citizen] is being defaulted to a one to one mapping.
+[EL Config]: metadata: 2017-05-08 16:37:53.073--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The target entity (reference) class for the many to one mapping element [field citizen] is being defaulted to: class es.uniovi.asw.model.Citizen.
+[EL Config]: metadata: 2017-05-08 16:37:53.074--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The element [field sugerencia] is being defaulted to a one to one mapping.
+[EL Config]: metadata: 2017-05-08 16:37:53.074--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The target entity (reference) class for the many to one mapping element [field sugerencia] is being defaulted to: class es.uniovi.asw.model.Sugerencia.
+[EL Config]: metadata: 2017-05-08 16:37:53.074--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The access type for the persistent class [class es.uniovi.asw.model.Administrador] is set to [FIELD].
+[EL Config]: metadata: 2017-05-08 16:37:53.075--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The access type for the persistent class [class es.uniovi.asw.model.Citizen] is set to [FIELD].
+[EL Config]: metadata: 2017-05-08 16:37:53.075--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The target entity (reference) class for the one to many mapping element [field votosComentarios] is being defaulted to: class es.uniovi.asw.model.VotoComentario.
+[EL Config]: metadata: 2017-05-08 16:37:53.076--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The target entity (reference) class for the one to many mapping element [field votosSugerencias] is being defaulted to: class es.uniovi.asw.model.VotoSugerencia.
+[EL Config]: metadata: 2017-05-08 16:37:53.076--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The target entity (reference) class for the one to many mapping element [field sugerencias] is being defaulted to: class es.uniovi.asw.model.Sugerencia.
+[EL Config]: metadata: 2017-05-08 16:37:53.077--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The target entity (reference) class for the one to many mapping element [field comentarios] is being defaulted to: class es.uniovi.asw.model.Comentario.
+[EL Config]: metadata: 2017-05-08 16:37:53.077--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The alias name for the entity class [class es.uniovi.asw.model.Sugerencia] is being defaulted to: Sugerencia.
+[EL Config]: metadata: 2017-05-08 16:37:53.1--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The column name for element [contenido] is being defaulted to: CONTENIDO.
+[EL Config]: metadata: 2017-05-08 16:37:53.101--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The column name for element [estado] is being defaulted to: ESTADO.
+[EL Config]: metadata: 2017-05-08 16:37:53.103--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The column name for element [titulo] is being defaulted to: TITULO.
+[EL Config]: metadata: 2017-05-08 16:37:53.103--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2017-05-08 16:37:53.11--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The alias name for the entity class [class es.uniovi.asw.model.Comentario] is being defaulted to: Comentario.
+[EL Config]: metadata: 2017-05-08 16:37:53.111--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The column name for element [contenido] is being defaulted to: CONTENIDO.
+[EL Config]: metadata: 2017-05-08 16:37:53.111--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2017-05-08 16:37:53.111--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The alias name for the entity class [class es.uniovi.asw.model.Categoria] is being defaulted to: Categoria.
+[EL Config]: metadata: 2017-05-08 16:37:53.112--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The column name for element [fechaInicio] is being defaulted to: FECHAINICIO.
+[EL Config]: metadata: 2017-05-08 16:37:53.114--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The column name for element [minimoVotos] is being defaulted to: MINIMOVOTOS.
+[EL Config]: metadata: 2017-05-08 16:37:53.115--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2017-05-08 16:37:53.116--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The column name for element [nombre] is being defaulted to: NOMBRE.
+[EL Config]: metadata: 2017-05-08 16:37:53.116--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The column name for element [fechaFin] is being defaulted to: FECHAFIN.
+[EL Config]: metadata: 2017-05-08 16:37:53.116--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The alias name for the entity class [class es.uniovi.asw.model.VotoComentario] is being defaulted to: VotoComentario.
+[EL Config]: metadata: 2017-05-08 16:37:53.12--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The column name for element [isAFavor] is being defaulted to: ISAFAVOR.
+[EL Config]: metadata: 2017-05-08 16:37:53.12--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The alias name for the entity class [class es.uniovi.asw.model.VotoSugerencia] is being defaulted to: VotoSugerencia.
+[EL Config]: metadata: 2017-05-08 16:37:53.121--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The column name for element [isAFavor] is being defaulted to: ISAFAVOR.
+[EL Config]: metadata: 2017-05-08 16:37:53.121--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The alias name for the entity class [class es.uniovi.asw.model.Administrador] is being defaulted to: Administrador.
+[EL Config]: metadata: 2017-05-08 16:37:53.122--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The column name for element [password] is being defaulted to: PASSWORD.
+[EL Config]: metadata: 2017-05-08 16:37:53.122--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The column name for element [usuario] is being defaulted to: USUARIO.
+[EL Config]: metadata: 2017-05-08 16:37:53.122--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2017-05-08 16:37:53.123--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The alias name for the entity class [class es.uniovi.asw.model.Citizen] is being defaulted to: Citizen.
+[EL Config]: metadata: 2017-05-08 16:37:53.123--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The column name for element [apellidos] is being defaulted to: APELLIDOS.
+[EL Config]: metadata: 2017-05-08 16:37:53.124--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The column name for element [fechaNacimiento] is being defaulted to: FECHANACIMIENTO.
+[EL Config]: metadata: 2017-05-08 16:37:53.124--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The column name for element [direccion] is being defaulted to: DIRECCION.
+[EL Config]: metadata: 2017-05-08 16:37:53.124--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The column name for element [nombre] is being defaulted to: NOMBRE.
+[EL Config]: metadata: 2017-05-08 16:37:53.124--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The column name for element [nacionalidad] is being defaulted to: NACIONALIDAD.
+[EL Config]: metadata: 2017-05-08 16:37:53.125--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The column name for element [password] is being defaulted to: PASSWORD.
+[EL Config]: metadata: 2017-05-08 16:37:53.125--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The column name for element [usuario] is being defaulted to: USUARIO.
+[EL Config]: metadata: 2017-05-08 16:37:53.125--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2017-05-08 16:37:53.126--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The column name for element [email] is being defaulted to: EMAIL.
+[EL Config]: metadata: 2017-05-08 16:37:53.126--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The column name for element [DNI] is being defaulted to: DNI.
+[EL Config]: metadata: 2017-05-08 16:37:53.147--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The primary key column name for the mapping element [field citizen] is being defaulted to: ID.
+[EL Config]: metadata: 2017-05-08 16:37:53.148--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The foreign key column name for the mapping element [citizen] is being defaulted to: CITIZEN_ID.
+[EL Config]: metadata: 2017-05-08 16:37:53.148--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The primary key column name for the mapping element [field comentario] is being defaulted to: ID.
+[EL Config]: metadata: 2017-05-08 16:37:53.149--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The foreign key column name for the mapping element [comentario] is being defaulted to: COMENTARIO_ID.
+[EL Config]: metadata: 2017-05-08 16:37:53.149--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The primary key column name for the mapping element [field citizen] is being defaulted to: ID.
+[EL Config]: metadata: 2017-05-08 16:37:53.149--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The foreign key column name for the mapping element [citizen] is being defaulted to: CITIZEN_ID.
+[EL Config]: metadata: 2017-05-08 16:37:53.15--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The primary key column name for the mapping element [field sugerencia] is being defaulted to: ID.
+[EL Config]: metadata: 2017-05-08 16:37:53.15--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The foreign key column name for the mapping element [sugerencia] is being defaulted to: SUGERENCIA_ID.
+[EL Config]: metadata: 2017-05-08 16:37:53.172--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The primary key column name for the mapping element [field palabrasNoPermitidas] is being defaulted to: ID.
+[EL Config]: metadata: 2017-05-08 16:37:53.172--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The foreign key column name for the mapping element [palabrasNoPermitidas] is being defaulted to: Categoria_ID.
+[EL Config]: metadata: 2017-05-08 16:37:53.178--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The primary key column name for the mapping element [field citizen] is being defaulted to: ID.
+[EL Config]: metadata: 2017-05-08 16:37:53.179--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The foreign key column name for the mapping element [citizen] is being defaulted to: CITIZEN_ID.
+[EL Config]: metadata: 2017-05-08 16:37:53.179--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The primary key column name for the mapping element [field categoria] is being defaulted to: ID.
+[EL Config]: metadata: 2017-05-08 16:37:53.179--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The foreign key column name for the mapping element [categoria] is being defaulted to: CATEGORIA_ID.
+[EL Config]: metadata: 2017-05-08 16:37:53.179--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The primary key column name for the mapping element [field citizen] is being defaulted to: ID.
+[EL Config]: metadata: 2017-05-08 16:37:53.18--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The foreign key column name for the mapping element [citizen] is being defaulted to: CITIZEN_ID.
+[EL Config]: metadata: 2017-05-08 16:37:53.18--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The primary key column name for the mapping element [field sugerencia] is being defaulted to: ID.
+[EL Config]: metadata: 2017-05-08 16:37:53.18--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--The foreign key column name for the mapping element [sugerencia] is being defaulted to: SUGERENCIA_ID.
+[EL Info]: 2017-05-08 16:37:53.893--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--EclipseLink, version: Eclipse Persistence Services - 2.6.4.v20160829-44060b6
+[EL Fine]: connection: 2017-05-08 16:37:54.129--Thread(Thread[restartedMain,5,main])--Detected database platform: org.eclipse.persistence.platform.database.H2Platform
+[EL Config]: connection: 2017-05-08 16:37:54.139--ServerSession(1977381311)--Connection(848521988)--Thread(Thread[restartedMain,5,main])--connecting(DatabaseLogin(
 	platform=>H2Platform
 	user name=> "sa"
 	datasource URL=> "jdbc:h2:mem:test"
 ))
-[EL Config]: connection: 2017-05-05 22:53:45.149--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--Connected: jdbc:h2:mem:test
+[EL Config]: connection: 2017-05-08 16:37:54.142--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--Connected: jdbc:h2:mem:test
 	User: SA
 	Database: H2  Version: 1.4.193 (2016-10-31)
 	Driver: H2 JDBC Driver  Version: 1.4.193 (2016-10-31)
-[EL Info]: connection: 2017-05-05 22:53:45.237--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--/file:/C:/Users/Seila/Desktop/ASW/parti3b/target/classes/_citizens login successful
-[EL Fine]: sql: 2017-05-05 22:53:45.253--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TVOTOCOMENTARIO DROP CONSTRAINT FK_TVOTOCOMENTARIO_COMENTARIO_ID
-[EL Fine]: sql: 2017-05-05 22:53:45.257--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.268--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Info]: connection: 2017-05-08 16:37:54.275--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--/file:/Users/eduardomartinez/Dropbox/Practica/ASW/parti3b/target/classes/_citizens login successful
+[EL Fine]: sql: 2017-05-08 16:37:54.3--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TVOTOCOMENTARIO DROP CONSTRAINT FK_TVOTOCOMENTARIO_COMENTARIO_ID
+[EL Fine]: sql: 2017-05-08 16:37:54.324--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.35--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TVOTOCOMENTARIO" no encontrada
 Table "TVOTOCOMENTARIO" not found; SQL statement:
 ALTER TABLE TVOTOCOMENTARIO DROP CONSTRAINT FK_TVOTOCOMENTARIO_COMENTARIO_ID [42102-193]
 Error Code: 42102
 Call: ALTER TABLE TVOTOCOMENTARIO DROP CONSTRAINT FK_TVOTOCOMENTARIO_COMENTARIO_ID
 Query: DataModifyQuery(sql="ALTER TABLE TVOTOCOMENTARIO DROP CONSTRAINT FK_TVOTOCOMENTARIO_COMENTARIO_ID")
-[EL Fine]: sql: 2017-05-05 22:53:45.269--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TVOTOCOMENTARIO DROP CONSTRAINT FK_TVOTOCOMENTARIO_CITIZEN_ID
-[EL Fine]: sql: 2017-05-05 22:53:45.269--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.269--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.353--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TVOTOCOMENTARIO DROP CONSTRAINT FK_TVOTOCOMENTARIO_CITIZEN_ID
+[EL Fine]: sql: 2017-05-08 16:37:54.354--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.354--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TVOTOCOMENTARIO" no encontrada
 Table "TVOTOCOMENTARIO" not found; SQL statement:
 ALTER TABLE TVOTOCOMENTARIO DROP CONSTRAINT FK_TVOTOCOMENTARIO_CITIZEN_ID [42102-193]
 Error Code: 42102
 Call: ALTER TABLE TVOTOCOMENTARIO DROP CONSTRAINT FK_TVOTOCOMENTARIO_CITIZEN_ID
 Query: DataModifyQuery(sql="ALTER TABLE TVOTOCOMENTARIO DROP CONSTRAINT FK_TVOTOCOMENTARIO_CITIZEN_ID")
-[EL Fine]: sql: 2017-05-05 22:53:45.269--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TCOMENTARIO DROP CONSTRAINT FK_TCOMENTARIO_CITIZEN_ID
-[EL Fine]: sql: 2017-05-05 22:53:45.27--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.27--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.354--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TCOMENTARIO DROP CONSTRAINT FK_TCOMENTARIO_CITIZEN_ID
+[EL Fine]: sql: 2017-05-08 16:37:54.355--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.355--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TCOMENTARIO" no encontrada
 Table "TCOMENTARIO" not found; SQL statement:
 ALTER TABLE TCOMENTARIO DROP CONSTRAINT FK_TCOMENTARIO_CITIZEN_ID [42102-193]
 Error Code: 42102
 Call: ALTER TABLE TCOMENTARIO DROP CONSTRAINT FK_TCOMENTARIO_CITIZEN_ID
 Query: DataModifyQuery(sql="ALTER TABLE TCOMENTARIO DROP CONSTRAINT FK_TCOMENTARIO_CITIZEN_ID")
-[EL Fine]: sql: 2017-05-05 22:53:45.27--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TCOMENTARIO DROP CONSTRAINT FK_TCOMENTARIO_SUGERENCIA_ID
-[EL Fine]: sql: 2017-05-05 22:53:45.27--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.27--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.355--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TCOMENTARIO DROP CONSTRAINT FK_TCOMENTARIO_SUGERENCIA_ID
+[EL Fine]: sql: 2017-05-08 16:37:54.356--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.356--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TCOMENTARIO" no encontrada
 Table "TCOMENTARIO" not found; SQL statement:
 ALTER TABLE TCOMENTARIO DROP CONSTRAINT FK_TCOMENTARIO_SUGERENCIA_ID [42102-193]
 Error Code: 42102
 Call: ALTER TABLE TCOMENTARIO DROP CONSTRAINT FK_TCOMENTARIO_SUGERENCIA_ID
 Query: DataModifyQuery(sql="ALTER TABLE TCOMENTARIO DROP CONSTRAINT FK_TCOMENTARIO_SUGERENCIA_ID")
-[EL Fine]: sql: 2017-05-05 22:53:45.27--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TSUGERENCIA DROP CONSTRAINT FK_TSUGERENCIA_CATEGORIA_ID
-[EL Fine]: sql: 2017-05-05 22:53:45.27--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.27--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.356--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TSUGERENCIA DROP CONSTRAINT FK_TSUGERENCIA_CATEGORIA_ID
+[EL Fine]: sql: 2017-05-08 16:37:54.356--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.357--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TSUGERENCIA" no encontrada
 Table "TSUGERENCIA" not found; SQL statement:
 ALTER TABLE TSUGERENCIA DROP CONSTRAINT FK_TSUGERENCIA_CATEGORIA_ID [42102-193]
 Error Code: 42102
 Call: ALTER TABLE TSUGERENCIA DROP CONSTRAINT FK_TSUGERENCIA_CATEGORIA_ID
 Query: DataModifyQuery(sql="ALTER TABLE TSUGERENCIA DROP CONSTRAINT FK_TSUGERENCIA_CATEGORIA_ID")
-[EL Fine]: sql: 2017-05-05 22:53:45.27--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TSUGERENCIA DROP CONSTRAINT FK_TSUGERENCIA_CITIZEN_ID
-[EL Fine]: sql: 2017-05-05 22:53:45.271--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.271--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.357--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TSUGERENCIA DROP CONSTRAINT FK_TSUGERENCIA_CITIZEN_ID
+[EL Fine]: sql: 2017-05-08 16:37:54.357--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.357--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TSUGERENCIA" no encontrada
 Table "TSUGERENCIA" not found; SQL statement:
 ALTER TABLE TSUGERENCIA DROP CONSTRAINT FK_TSUGERENCIA_CITIZEN_ID [42102-193]
 Error Code: 42102
 Call: ALTER TABLE TSUGERENCIA DROP CONSTRAINT FK_TSUGERENCIA_CITIZEN_ID
 Query: DataModifyQuery(sql="ALTER TABLE TSUGERENCIA DROP CONSTRAINT FK_TSUGERENCIA_CITIZEN_ID")
-[EL Fine]: sql: 2017-05-05 22:53:45.271--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TVOTOSUGERENCIA DROP CONSTRAINT FK_TVOTOSUGERENCIA_CITIZEN_ID
-[EL Fine]: sql: 2017-05-05 22:53:45.271--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.271--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.358--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TVOTOSUGERENCIA DROP CONSTRAINT FK_TVOTOSUGERENCIA_CITIZEN_ID
+[EL Fine]: sql: 2017-05-08 16:37:54.358--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.359--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TVOTOSUGERENCIA" no encontrada
 Table "TVOTOSUGERENCIA" not found; SQL statement:
 ALTER TABLE TVOTOSUGERENCIA DROP CONSTRAINT FK_TVOTOSUGERENCIA_CITIZEN_ID [42102-193]
 Error Code: 42102
 Call: ALTER TABLE TVOTOSUGERENCIA DROP CONSTRAINT FK_TVOTOSUGERENCIA_CITIZEN_ID
 Query: DataModifyQuery(sql="ALTER TABLE TVOTOSUGERENCIA DROP CONSTRAINT FK_TVOTOSUGERENCIA_CITIZEN_ID")
-[EL Fine]: sql: 2017-05-05 22:53:45.271--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TVOTOSUGERENCIA DROP CONSTRAINT FK_TVOTOSUGERENCIA_SUGERENCIA_ID
-[EL Fine]: sql: 2017-05-05 22:53:45.271--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.271--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.36--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TVOTOSUGERENCIA DROP CONSTRAINT FK_TVOTOSUGERENCIA_SUGERENCIA_ID
+[EL Fine]: sql: 2017-05-08 16:37:54.36--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.361--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TVOTOSUGERENCIA" no encontrada
 Table "TVOTOSUGERENCIA" not found; SQL statement:
 ALTER TABLE TVOTOSUGERENCIA DROP CONSTRAINT FK_TVOTOSUGERENCIA_SUGERENCIA_ID [42102-193]
 Error Code: 42102
 Call: ALTER TABLE TVOTOSUGERENCIA DROP CONSTRAINT FK_TVOTOSUGERENCIA_SUGERENCIA_ID
 Query: DataModifyQuery(sql="ALTER TABLE TVOTOSUGERENCIA DROP CONSTRAINT FK_TVOTOSUGERENCIA_SUGERENCIA_ID")
-[EL Fine]: sql: 2017-05-05 22:53:45.272--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TPALABRAS DROP CONSTRAINT FK_TPALABRAS_Categoria_ID
-[EL Fine]: sql: 2017-05-05 22:53:45.272--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.272--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.361--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TPALABRAS DROP CONSTRAINT FK_TPALABRAS_Categoria_ID
+[EL Fine]: sql: 2017-05-08 16:37:54.362--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.362--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TPALABRAS" no encontrada
 Table "TPALABRAS" not found; SQL statement:
 ALTER TABLE TPALABRAS DROP CONSTRAINT FK_TPALABRAS_Categoria_ID [42102-193]
 Error Code: 42102
 Call: ALTER TABLE TPALABRAS DROP CONSTRAINT FK_TPALABRAS_Categoria_ID
 Query: DataModifyQuery(sql="ALTER TABLE TPALABRAS DROP CONSTRAINT FK_TPALABRAS_Categoria_ID")
-[EL Fine]: sql: 2017-05-05 22:53:45.272--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TVOTOCOMENTARIO
-[EL Fine]: sql: 2017-05-05 22:53:45.273--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.273--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.363--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TVOTOCOMENTARIO
+[EL Fine]: sql: 2017-05-08 16:37:54.364--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.364--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TVOTOCOMENTARIO" no encontrada
 Table "TVOTOCOMENTARIO" not found; SQL statement:
 DROP TABLE TVOTOCOMENTARIO [42102-193]
 Error Code: 42102
 Call: DROP TABLE TVOTOCOMENTARIO
 Query: DataModifyQuery(sql="DROP TABLE TVOTOCOMENTARIO")
-[EL Fine]: sql: 2017-05-05 22:53:45.273--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TADMINISTRADOR
-[EL Fine]: sql: 2017-05-05 22:53:45.273--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.273--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.364--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TADMINISTRADOR
+[EL Fine]: sql: 2017-05-08 16:37:54.364--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.365--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TADMINISTRADOR" no encontrada
 Table "TADMINISTRADOR" not found; SQL statement:
 DROP TABLE TADMINISTRADOR [42102-193]
 Error Code: 42102
 Call: DROP TABLE TADMINISTRADOR
 Query: DataModifyQuery(sql="DROP TABLE TADMINISTRADOR")
-[EL Fine]: sql: 2017-05-05 22:53:45.273--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TCOMENTARIO
-[EL Fine]: sql: 2017-05-05 22:53:45.273--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.273--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.365--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TCOMENTARIO
+[EL Fine]: sql: 2017-05-08 16:37:54.366--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.366--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TCOMENTARIO" no encontrada
 Table "TCOMENTARIO" not found; SQL statement:
 DROP TABLE TCOMENTARIO [42102-193]
 Error Code: 42102
 Call: DROP TABLE TCOMENTARIO
 Query: DataModifyQuery(sql="DROP TABLE TCOMENTARIO")
-[EL Fine]: sql: 2017-05-05 22:53:45.274--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TSUGERENCIA
-[EL Fine]: sql: 2017-05-05 22:53:45.274--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.274--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.367--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TSUGERENCIA
+[EL Fine]: sql: 2017-05-08 16:37:54.367--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.368--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TSUGERENCIA" no encontrada
 Table "TSUGERENCIA" not found; SQL statement:
 DROP TABLE TSUGERENCIA [42102-193]
 Error Code: 42102
 Call: DROP TABLE TSUGERENCIA
 Query: DataModifyQuery(sql="DROP TABLE TSUGERENCIA")
-[EL Fine]: sql: 2017-05-05 22:53:45.274--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TVOTOSUGERENCIA
-[EL Fine]: sql: 2017-05-05 22:53:45.274--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.274--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.368--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TVOTOSUGERENCIA
+[EL Fine]: sql: 2017-05-08 16:37:54.368--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.368--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TVOTOSUGERENCIA" no encontrada
 Table "TVOTOSUGERENCIA" not found; SQL statement:
 DROP TABLE TVOTOSUGERENCIA [42102-193]
 Error Code: 42102
 Call: DROP TABLE TVOTOSUGERENCIA
 Query: DataModifyQuery(sql="DROP TABLE TVOTOSUGERENCIA")
-[EL Fine]: sql: 2017-05-05 22:53:45.274--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TCATEGORIA
-[EL Fine]: sql: 2017-05-05 22:53:45.274--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.274--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.368--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TCATEGORIA
+[EL Fine]: sql: 2017-05-08 16:37:54.369--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.369--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TCATEGORIA" no encontrada
 Table "TCATEGORIA" not found; SQL statement:
 DROP TABLE TCATEGORIA [42102-193]
 Error Code: 42102
 Call: DROP TABLE TCATEGORIA
 Query: DataModifyQuery(sql="DROP TABLE TCATEGORIA")
-[EL Fine]: sql: 2017-05-05 22:53:45.275--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TCITIZENS
-[EL Fine]: sql: 2017-05-05 22:53:45.275--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.275--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.369--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TCITIZENS
+[EL Fine]: sql: 2017-05-08 16:37:54.37--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.37--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TCITIZENS" no encontrada
 Table "TCITIZENS" not found; SQL statement:
 DROP TABLE TCITIZENS [42102-193]
 Error Code: 42102
 Call: DROP TABLE TCITIZENS
 Query: DataModifyQuery(sql="DROP TABLE TCITIZENS")
-[EL Fine]: sql: 2017-05-05 22:53:45.275--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TPALABRAS
-[EL Fine]: sql: 2017-05-05 22:53:45.275--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.275--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.37--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TPALABRAS
+[EL Fine]: sql: 2017-05-08 16:37:54.37--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.371--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TPALABRAS" no encontrada
 Table "TPALABRAS" not found; SQL statement:
 DROP TABLE TPALABRAS [42102-193]
 Error Code: 42102
 Call: DROP TABLE TPALABRAS
 Query: DataModifyQuery(sql="DROP TABLE TPALABRAS")
-[EL Fine]: sql: 2017-05-05 22:53:45.275--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TVOTOCOMENTARIO
-[EL Fine]: sql: 2017-05-05 22:53:45.275--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.276--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.371--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TVOTOCOMENTARIO
+[EL Fine]: sql: 2017-05-08 16:37:54.372--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.372--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TVOTOCOMENTARIO" no encontrada
 Table "TVOTOCOMENTARIO" not found; SQL statement:
 DROP TABLE TVOTOCOMENTARIO [42102-193]
 Error Code: 42102
 Call: DROP TABLE TVOTOCOMENTARIO
 Query: DataModifyQuery(sql="DROP TABLE TVOTOCOMENTARIO")
-[EL Fine]: sql: 2017-05-05 22:53:45.276--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TADMINISTRADOR
-[EL Fine]: sql: 2017-05-05 22:53:45.276--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.276--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.373--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TADMINISTRADOR
+[EL Fine]: sql: 2017-05-08 16:37:54.373--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.373--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TADMINISTRADOR" no encontrada
 Table "TADMINISTRADOR" not found; SQL statement:
 DROP TABLE TADMINISTRADOR [42102-193]
 Error Code: 42102
 Call: DROP TABLE TADMINISTRADOR
 Query: DataModifyQuery(sql="DROP TABLE TADMINISTRADOR")
-[EL Fine]: sql: 2017-05-05 22:53:45.276--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TCOMENTARIO
-[EL Fine]: sql: 2017-05-05 22:53:45.276--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.276--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.373--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TCOMENTARIO
+[EL Fine]: sql: 2017-05-08 16:37:54.374--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.375--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TCOMENTARIO" no encontrada
 Table "TCOMENTARIO" not found; SQL statement:
 DROP TABLE TCOMENTARIO [42102-193]
 Error Code: 42102
 Call: DROP TABLE TCOMENTARIO
 Query: DataModifyQuery(sql="DROP TABLE TCOMENTARIO")
-[EL Fine]: sql: 2017-05-05 22:53:45.277--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TSUGERENCIA
-[EL Fine]: sql: 2017-05-05 22:53:45.277--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.277--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.375--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TSUGERENCIA
+[EL Fine]: sql: 2017-05-08 16:37:54.376--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.376--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TSUGERENCIA" no encontrada
 Table "TSUGERENCIA" not found; SQL statement:
 DROP TABLE TSUGERENCIA [42102-193]
 Error Code: 42102
 Call: DROP TABLE TSUGERENCIA
 Query: DataModifyQuery(sql="DROP TABLE TSUGERENCIA")
-[EL Fine]: sql: 2017-05-05 22:53:45.277--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TVOTOSUGERENCIA
-[EL Fine]: sql: 2017-05-05 22:53:45.277--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.277--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.376--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TVOTOSUGERENCIA
+[EL Fine]: sql: 2017-05-08 16:37:54.376--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.376--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TVOTOSUGERENCIA" no encontrada
 Table "TVOTOSUGERENCIA" not found; SQL statement:
 DROP TABLE TVOTOSUGERENCIA [42102-193]
 Error Code: 42102
 Call: DROP TABLE TVOTOSUGERENCIA
 Query: DataModifyQuery(sql="DROP TABLE TVOTOSUGERENCIA")
-[EL Fine]: sql: 2017-05-05 22:53:45.277--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TCATEGORIA
-[EL Fine]: sql: 2017-05-05 22:53:45.277--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.277--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.376--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TCATEGORIA
+[EL Fine]: sql: 2017-05-08 16:37:54.377--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.377--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TCATEGORIA" no encontrada
 Table "TCATEGORIA" not found; SQL statement:
 DROP TABLE TCATEGORIA [42102-193]
 Error Code: 42102
 Call: DROP TABLE TCATEGORIA
 Query: DataModifyQuery(sql="DROP TABLE TCATEGORIA")
-[EL Fine]: sql: 2017-05-05 22:53:45.278--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TCITIZENS
-[EL Fine]: sql: 2017-05-05 22:53:45.278--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.278--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.377--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TCITIZENS
+[EL Fine]: sql: 2017-05-08 16:37:54.377--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.377--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TCITIZENS" no encontrada
 Table "TCITIZENS" not found; SQL statement:
 DROP TABLE TCITIZENS [42102-193]
 Error Code: 42102
 Call: DROP TABLE TCITIZENS
 Query: DataModifyQuery(sql="DROP TABLE TCITIZENS")
-[EL Fine]: sql: 2017-05-05 22:53:45.278--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TPALABRAS
-[EL Fine]: sql: 2017-05-05 22:53:45.278--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.278--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.377--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TPALABRAS
+[EL Fine]: sql: 2017-05-08 16:37:54.378--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.378--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TPALABRAS" no encontrada
 Table "TPALABRAS" not found; SQL statement:
 DROP TABLE TPALABRAS [42102-193]
 Error Code: 42102
 Call: DROP TABLE TPALABRAS
 Query: DataModifyQuery(sql="DROP TABLE TPALABRAS")
-[EL Fine]: sql: 2017-05-05 22:53:45.278--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TVOTOCOMENTARIO
-[EL Fine]: sql: 2017-05-05 22:53:45.279--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.279--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.378--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TVOTOCOMENTARIO
+[EL Fine]: sql: 2017-05-08 16:37:54.378--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.378--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TVOTOCOMENTARIO" no encontrada
 Table "TVOTOCOMENTARIO" not found; SQL statement:
 DROP TABLE TVOTOCOMENTARIO [42102-193]
 Error Code: 42102
 Call: DROP TABLE TVOTOCOMENTARIO
 Query: DataModifyQuery(sql="DROP TABLE TVOTOCOMENTARIO")
-[EL Fine]: sql: 2017-05-05 22:53:45.279--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TADMINISTRADOR
-[EL Fine]: sql: 2017-05-05 22:53:45.279--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.279--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.378--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TADMINISTRADOR
+[EL Fine]: sql: 2017-05-08 16:37:54.379--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.379--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TADMINISTRADOR" no encontrada
 Table "TADMINISTRADOR" not found; SQL statement:
 DROP TABLE TADMINISTRADOR [42102-193]
 Error Code: 42102
 Call: DROP TABLE TADMINISTRADOR
 Query: DataModifyQuery(sql="DROP TABLE TADMINISTRADOR")
-[EL Fine]: sql: 2017-05-05 22:53:45.279--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TCOMENTARIO
-[EL Fine]: sql: 2017-05-05 22:53:45.279--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.279--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.379--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TCOMENTARIO
+[EL Fine]: sql: 2017-05-08 16:37:54.379--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.379--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TCOMENTARIO" no encontrada
 Table "TCOMENTARIO" not found; SQL statement:
 DROP TABLE TCOMENTARIO [42102-193]
 Error Code: 42102
 Call: DROP TABLE TCOMENTARIO
 Query: DataModifyQuery(sql="DROP TABLE TCOMENTARIO")
-[EL Fine]: sql: 2017-05-05 22:53:45.279--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TSUGERENCIA
-[EL Fine]: sql: 2017-05-05 22:53:45.28--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.28--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.379--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TSUGERENCIA
+[EL Fine]: sql: 2017-05-08 16:37:54.379--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.38--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TSUGERENCIA" no encontrada
 Table "TSUGERENCIA" not found; SQL statement:
 DROP TABLE TSUGERENCIA [42102-193]
 Error Code: 42102
 Call: DROP TABLE TSUGERENCIA
 Query: DataModifyQuery(sql="DROP TABLE TSUGERENCIA")
-[EL Fine]: sql: 2017-05-05 22:53:45.28--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TVOTOSUGERENCIA
-[EL Fine]: sql: 2017-05-05 22:53:45.28--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.28--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.38--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TVOTOSUGERENCIA
+[EL Fine]: sql: 2017-05-08 16:37:54.38--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.38--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TVOTOSUGERENCIA" no encontrada
 Table "TVOTOSUGERENCIA" not found; SQL statement:
 DROP TABLE TVOTOSUGERENCIA [42102-193]
 Error Code: 42102
 Call: DROP TABLE TVOTOSUGERENCIA
 Query: DataModifyQuery(sql="DROP TABLE TVOTOSUGERENCIA")
-[EL Fine]: sql: 2017-05-05 22:53:45.28--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TCATEGORIA
-[EL Fine]: sql: 2017-05-05 22:53:45.28--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.28--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.38--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TCATEGORIA
+[EL Fine]: sql: 2017-05-08 16:37:54.38--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.38--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TCATEGORIA" no encontrada
 Table "TCATEGORIA" not found; SQL statement:
 DROP TABLE TCATEGORIA [42102-193]
 Error Code: 42102
 Call: DROP TABLE TCATEGORIA
 Query: DataModifyQuery(sql="DROP TABLE TCATEGORIA")
-[EL Fine]: sql: 2017-05-05 22:53:45.281--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TCITIZENS
-[EL Fine]: sql: 2017-05-05 22:53:45.281--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.281--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.381--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TCITIZENS
+[EL Fine]: sql: 2017-05-08 16:37:54.381--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.381--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TCITIZENS" no encontrada
 Table "TCITIZENS" not found; SQL statement:
 DROP TABLE TCITIZENS [42102-193]
 Error Code: 42102
 Call: DROP TABLE TCITIZENS
 Query: DataModifyQuery(sql="DROP TABLE TCITIZENS")
-[EL Fine]: sql: 2017-05-05 22:53:45.281--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TPALABRAS
-[EL Fine]: sql: 2017-05-05 22:53:45.281--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.281--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.383--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TPALABRAS
+[EL Fine]: sql: 2017-05-08 16:37:54.384--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.384--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TPALABRAS" no encontrada
 Table "TPALABRAS" not found; SQL statement:
 DROP TABLE TPALABRAS [42102-193]
 Error Code: 42102
 Call: DROP TABLE TPALABRAS
 Query: DataModifyQuery(sql="DROP TABLE TPALABRAS")
-[EL Fine]: sql: 2017-05-05 22:53:45.281--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TVOTOCOMENTARIO
-[EL Fine]: sql: 2017-05-05 22:53:45.281--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.281--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.385--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TVOTOCOMENTARIO
+[EL Fine]: sql: 2017-05-08 16:37:54.386--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.386--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TVOTOCOMENTARIO" no encontrada
 Table "TVOTOCOMENTARIO" not found; SQL statement:
 DROP TABLE TVOTOCOMENTARIO [42102-193]
 Error Code: 42102
 Call: DROP TABLE TVOTOCOMENTARIO
 Query: DataModifyQuery(sql="DROP TABLE TVOTOCOMENTARIO")
-[EL Fine]: sql: 2017-05-05 22:53:45.282--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TADMINISTRADOR
-[EL Fine]: sql: 2017-05-05 22:53:45.282--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.282--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.386--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TADMINISTRADOR
+[EL Fine]: sql: 2017-05-08 16:37:54.386--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.386--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TADMINISTRADOR" no encontrada
 Table "TADMINISTRADOR" not found; SQL statement:
 DROP TABLE TADMINISTRADOR [42102-193]
 Error Code: 42102
 Call: DROP TABLE TADMINISTRADOR
 Query: DataModifyQuery(sql="DROP TABLE TADMINISTRADOR")
-[EL Fine]: sql: 2017-05-05 22:53:45.282--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TCOMENTARIO
-[EL Fine]: sql: 2017-05-05 22:53:45.282--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.282--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.387--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TCOMENTARIO
+[EL Fine]: sql: 2017-05-08 16:37:54.387--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.387--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TCOMENTARIO" no encontrada
 Table "TCOMENTARIO" not found; SQL statement:
 DROP TABLE TCOMENTARIO [42102-193]
 Error Code: 42102
 Call: DROP TABLE TCOMENTARIO
 Query: DataModifyQuery(sql="DROP TABLE TCOMENTARIO")
-[EL Fine]: sql: 2017-05-05 22:53:45.282--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TSUGERENCIA
-[EL Fine]: sql: 2017-05-05 22:53:45.282--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.283--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.387--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TSUGERENCIA
+[EL Fine]: sql: 2017-05-08 16:37:54.387--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.387--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TSUGERENCIA" no encontrada
 Table "TSUGERENCIA" not found; SQL statement:
 DROP TABLE TSUGERENCIA [42102-193]
 Error Code: 42102
 Call: DROP TABLE TSUGERENCIA
 Query: DataModifyQuery(sql="DROP TABLE TSUGERENCIA")
-[EL Fine]: sql: 2017-05-05 22:53:45.283--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TVOTOSUGERENCIA
-[EL Fine]: sql: 2017-05-05 22:53:45.283--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.283--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.387--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TVOTOSUGERENCIA
+[EL Fine]: sql: 2017-05-08 16:37:54.388--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.388--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TVOTOSUGERENCIA" no encontrada
 Table "TVOTOSUGERENCIA" not found; SQL statement:
 DROP TABLE TVOTOSUGERENCIA [42102-193]
 Error Code: 42102
 Call: DROP TABLE TVOTOSUGERENCIA
 Query: DataModifyQuery(sql="DROP TABLE TVOTOSUGERENCIA")
-[EL Fine]: sql: 2017-05-05 22:53:45.283--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TCATEGORIA
-[EL Fine]: sql: 2017-05-05 22:53:45.283--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.283--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.388--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TCATEGORIA
+[EL Fine]: sql: 2017-05-08 16:37:54.388--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.388--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TCATEGORIA" no encontrada
 Table "TCATEGORIA" not found; SQL statement:
 DROP TABLE TCATEGORIA [42102-193]
 Error Code: 42102
 Call: DROP TABLE TCATEGORIA
 Query: DataModifyQuery(sql="DROP TABLE TCATEGORIA")
-[EL Fine]: sql: 2017-05-05 22:53:45.283--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TCITIZENS
-[EL Fine]: sql: 2017-05-05 22:53:45.284--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.284--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.388--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TCITIZENS
+[EL Fine]: sql: 2017-05-08 16:37:54.389--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.389--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TCITIZENS" no encontrada
 Table "TCITIZENS" not found; SQL statement:
 DROP TABLE TCITIZENS [42102-193]
 Error Code: 42102
 Call: DROP TABLE TCITIZENS
 Query: DataModifyQuery(sql="DROP TABLE TCITIZENS")
-[EL Fine]: sql: 2017-05-05 22:53:45.284--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TPALABRAS
-[EL Fine]: sql: 2017-05-05 22:53:45.284--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.284--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.389--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TPALABRAS
+[EL Fine]: sql: 2017-05-08 16:37:54.389--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.389--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TPALABRAS" no encontrada
 Table "TPALABRAS" not found; SQL statement:
 DROP TABLE TPALABRAS [42102-193]
 Error Code: 42102
 Call: DROP TABLE TPALABRAS
 Query: DataModifyQuery(sql="DROP TABLE TPALABRAS")
-[EL Fine]: sql: 2017-05-05 22:53:45.284--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TVOTOCOMENTARIO
-[EL Fine]: sql: 2017-05-05 22:53:45.284--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.284--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.389--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TVOTOCOMENTARIO
+[EL Fine]: sql: 2017-05-08 16:37:54.39--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.39--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TVOTOCOMENTARIO" no encontrada
 Table "TVOTOCOMENTARIO" not found; SQL statement:
 DROP TABLE TVOTOCOMENTARIO [42102-193]
 Error Code: 42102
 Call: DROP TABLE TVOTOCOMENTARIO
 Query: DataModifyQuery(sql="DROP TABLE TVOTOCOMENTARIO")
-[EL Fine]: sql: 2017-05-05 22:53:45.285--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TADMINISTRADOR
-[EL Fine]: sql: 2017-05-05 22:53:45.285--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.285--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.39--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TADMINISTRADOR
+[EL Fine]: sql: 2017-05-08 16:37:54.39--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.391--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TADMINISTRADOR" no encontrada
 Table "TADMINISTRADOR" not found; SQL statement:
 DROP TABLE TADMINISTRADOR [42102-193]
 Error Code: 42102
 Call: DROP TABLE TADMINISTRADOR
 Query: DataModifyQuery(sql="DROP TABLE TADMINISTRADOR")
-[EL Fine]: sql: 2017-05-05 22:53:45.285--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TCOMENTARIO
-[EL Fine]: sql: 2017-05-05 22:53:45.285--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.285--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.391--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TCOMENTARIO
+[EL Fine]: sql: 2017-05-08 16:37:54.391--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.391--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TCOMENTARIO" no encontrada
 Table "TCOMENTARIO" not found; SQL statement:
 DROP TABLE TCOMENTARIO [42102-193]
 Error Code: 42102
 Call: DROP TABLE TCOMENTARIO
 Query: DataModifyQuery(sql="DROP TABLE TCOMENTARIO")
-[EL Fine]: sql: 2017-05-05 22:53:45.285--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TSUGERENCIA
-[EL Fine]: sql: 2017-05-05 22:53:45.285--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.285--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.391--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TSUGERENCIA
+[EL Fine]: sql: 2017-05-08 16:37:54.392--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.392--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TSUGERENCIA" no encontrada
 Table "TSUGERENCIA" not found; SQL statement:
 DROP TABLE TSUGERENCIA [42102-193]
 Error Code: 42102
 Call: DROP TABLE TSUGERENCIA
 Query: DataModifyQuery(sql="DROP TABLE TSUGERENCIA")
-[EL Fine]: sql: 2017-05-05 22:53:45.286--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TVOTOSUGERENCIA
-[EL Fine]: sql: 2017-05-05 22:53:45.286--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.286--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.392--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TVOTOSUGERENCIA
+[EL Fine]: sql: 2017-05-08 16:37:54.392--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.393--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TVOTOSUGERENCIA" no encontrada
 Table "TVOTOSUGERENCIA" not found; SQL statement:
 DROP TABLE TVOTOSUGERENCIA [42102-193]
 Error Code: 42102
 Call: DROP TABLE TVOTOSUGERENCIA
 Query: DataModifyQuery(sql="DROP TABLE TVOTOSUGERENCIA")
-[EL Fine]: sql: 2017-05-05 22:53:45.286--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TCATEGORIA
-[EL Fine]: sql: 2017-05-05 22:53:45.286--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.286--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.393--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TCATEGORIA
+[EL Fine]: sql: 2017-05-08 16:37:54.394--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.394--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TCATEGORIA" no encontrada
 Table "TCATEGORIA" not found; SQL statement:
 DROP TABLE TCATEGORIA [42102-193]
 Error Code: 42102
 Call: DROP TABLE TCATEGORIA
 Query: DataModifyQuery(sql="DROP TABLE TCATEGORIA")
-[EL Fine]: sql: 2017-05-05 22:53:45.286--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TCITIZENS
-[EL Fine]: sql: 2017-05-05 22:53:45.286--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.286--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.394--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TCITIZENS
+[EL Fine]: sql: 2017-05-08 16:37:54.394--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.395--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TCITIZENS" no encontrada
 Table "TCITIZENS" not found; SQL statement:
 DROP TABLE TCITIZENS [42102-193]
 Error Code: 42102
 Call: DROP TABLE TCITIZENS
 Query: DataModifyQuery(sql="DROP TABLE TCITIZENS")
-[EL Fine]: sql: 2017-05-05 22:53:45.286--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--DROP TABLE TPALABRAS
-[EL Fine]: sql: 2017-05-05 22:53:45.287--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--SELECT 1
-[EL Warning]: 2017-05-05 22:53:45.287--ServerSession(1892283878)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: sql: 2017-05-08 16:37:54.395--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--DROP TABLE TPALABRAS
+[EL Fine]: sql: 2017-05-08 16:37:54.396--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--SELECT 1
+[EL Warning]: 2017-05-08 16:37:54.396--ServerSession(1977381311)--Thread(Thread[restartedMain,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.4.v20160829-44060b6): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: org.h2.jdbc.JdbcSQLException: Tabla "TPALABRAS" no encontrada
 Table "TPALABRAS" not found; SQL statement:
 DROP TABLE TPALABRAS [42102-193]
 Error Code: 42102
 Call: DROP TABLE TPALABRAS
 Query: DataModifyQuery(sql="DROP TABLE TPALABRAS")
-[EL Fine]: sql: 2017-05-05 22:53:45.288--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--CREATE TABLE TVOTOCOMENTARIO (ISAFAVOR BOOLEAN, CITIZEN_ID BIGINT NOT NULL, COMENTARIO_ID BIGINT NOT NULL, PRIMARY KEY (CITIZEN_ID, COMENTARIO_ID))
-[EL Fine]: sql: 2017-05-05 22:53:45.293--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--CREATE TABLE TADMINISTRADOR (ID BIGINT IDENTITY NOT NULL, PASSWORD VARCHAR, USUARIO VARCHAR, PRIMARY KEY (ID))
-[EL Fine]: sql: 2017-05-05 22:53:45.297--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--CREATE TABLE TCOMENTARIO (ID BIGINT IDENTITY NOT NULL, CONTENIDO VARCHAR, CITIZEN_ID BIGINT, SUGERENCIA_ID BIGINT, PRIMARY KEY (ID))
-[EL Fine]: sql: 2017-05-05 22:53:45.299--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--CREATE TABLE TSUGERENCIA (ID BIGINT IDENTITY NOT NULL, CONTENIDO VARCHAR, ESTADO VARCHAR, TITULO VARCHAR, CATEGORIA_ID BIGINT, CITIZEN_ID BIGINT, PRIMARY KEY (ID))
-[EL Fine]: sql: 2017-05-05 22:53:45.3--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--CREATE TABLE TVOTOSUGERENCIA (ISAFAVOR BOOLEAN, CITIZEN_ID BIGINT NOT NULL, SUGERENCIA_ID BIGINT NOT NULL, PRIMARY KEY (CITIZEN_ID, SUGERENCIA_ID))
-[EL Fine]: sql: 2017-05-05 22:53:45.301--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--CREATE TABLE TCATEGORIA (ID BIGINT IDENTITY NOT NULL, FECHAFIN DATE, FECHAINICIO DATE, MINIMOVOTOS INTEGER, NOMBRE VARCHAR, PRIMARY KEY (ID))
-[EL Fine]: sql: 2017-05-05 22:53:45.302--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--CREATE TABLE TCITIZENS (ID BIGINT IDENTITY NOT NULL, DNI VARCHAR, APELLIDOS VARCHAR, DIRECCION VARCHAR, EMAIL VARCHAR, FECHANACIMIENTO DATE, NACIONALIDAD VARCHAR, NOMBRE VARCHAR, PASSWORD VARCHAR, USUARIO VARCHAR, PRIMARY KEY (ID))
-[EL Fine]: sql: 2017-05-05 22:53:45.304--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--CREATE TABLE TPALABRAS (Categoria_ID BIGINT, PALABRA VARCHAR)
-[EL Fine]: sql: 2017-05-05 22:53:45.304--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TVOTOCOMENTARIO ADD CONSTRAINT FK_TVOTOCOMENTARIO_COMENTARIO_ID FOREIGN KEY (COMENTARIO_ID) REFERENCES TCOMENTARIO (ID)
-[EL Fine]: sql: 2017-05-05 22:53:45.311--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TVOTOCOMENTARIO ADD CONSTRAINT FK_TVOTOCOMENTARIO_CITIZEN_ID FOREIGN KEY (CITIZEN_ID) REFERENCES TCITIZENS (ID)
-[EL Fine]: sql: 2017-05-05 22:53:45.312--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TCOMENTARIO ADD CONSTRAINT FK_TCOMENTARIO_CITIZEN_ID FOREIGN KEY (CITIZEN_ID) REFERENCES TCITIZENS (ID)
-[EL Fine]: sql: 2017-05-05 22:53:45.314--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TCOMENTARIO ADD CONSTRAINT FK_TCOMENTARIO_SUGERENCIA_ID FOREIGN KEY (SUGERENCIA_ID) REFERENCES TSUGERENCIA (ID)
-[EL Fine]: sql: 2017-05-05 22:53:45.316--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TSUGERENCIA ADD CONSTRAINT FK_TSUGERENCIA_CATEGORIA_ID FOREIGN KEY (CATEGORIA_ID) REFERENCES TCATEGORIA (ID)
-[EL Fine]: sql: 2017-05-05 22:53:45.317--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TSUGERENCIA ADD CONSTRAINT FK_TSUGERENCIA_CITIZEN_ID FOREIGN KEY (CITIZEN_ID) REFERENCES TCITIZENS (ID)
-[EL Fine]: sql: 2017-05-05 22:53:45.318--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TVOTOSUGERENCIA ADD CONSTRAINT FK_TVOTOSUGERENCIA_CITIZEN_ID FOREIGN KEY (CITIZEN_ID) REFERENCES TCITIZENS (ID)
-[EL Fine]: sql: 2017-05-05 22:53:45.319--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TVOTOSUGERENCIA ADD CONSTRAINT FK_TVOTOSUGERENCIA_SUGERENCIA_ID FOREIGN KEY (SUGERENCIA_ID) REFERENCES TSUGERENCIA (ID)
-[EL Fine]: sql: 2017-05-05 22:53:45.32--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TPALABRAS ADD CONSTRAINT FK_TPALABRAS_Categoria_ID FOREIGN KEY (Categoria_ID) REFERENCES TCATEGORIA (ID)
-[EL Fine]: sql: 2017-05-05 22:53:45.321--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TADMINISTRADOR(ID,PASSWORD,USUARIO) VALUES (1,'admin','admin')
-[EL Fine]: sql: 2017-05-05 22:53:45.323--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TADMINISTRADOR(ID,PASSWORD,USUARIO) VALUES (2,'admin2','admin2')
-[EL Fine]: sql: 2017-05-05 22:53:45.323--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TADMINISTRADOR(ID,PASSWORD,USUARIO) VALUES (3,'admin3','admin3')
-[EL Fine]: sql: 2017-05-05 22:53:45.324--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCITIZENS(ID,DNI,APELLIDOS,DIRECCION,EMAIL,FECHANACIMIENTO,NACIONALIDAD,NOMBRE,PASSWORD,USUARIO) VALUES (1,'71435345N','Prada','direccion','seila@gmail.com','1996-01-15','espa','Seila','llFh9oTmjUI=','Seila_seila');
-[EL Fine]: sql: 2017-05-05 22:53:45.325--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCITIZENS(ID,DNI,APELLIDOS,DIRECCION,EMAIL,FECHANACIMIENTO,NACIONALIDAD,NOMBRE,PASSWORD,USUARIO) VALUES (2,'72344554T','Prada','direccion2','seila2@gmail.com','1996-01-15','espa','Seila2','llFh9oTmjUI=','Seila2_seila');
-[EL Fine]: sql: 2017-05-05 22:53:45.326--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCITIZENS(ID,DNI,APELLIDOS,DIRECCION,EMAIL,FECHANACIMIENTO,NACIONALIDAD,NOMBRE,PASSWORD,USUARIO) VALUES (3,'74564534E','Prada','direccion3','seila3@gmail.com','1996-01-15','espa','Seila3','llFh9oTmjUI=','Seila3_seila');
-[EL Fine]: sql: 2017-05-05 22:53:45.327--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCITIZENS(ID,DNI,APELLIDOS,DIRECCION,EMAIL,FECHANACIMIENTO,NACIONALIDAD,NOMBRE,PASSWORD,USUARIO) VALUES (4,'45654665K','Watson','direccion4','david@gmail.com','1986-04-19','eng','David','llFh9oTmjUI=','David_david');
-[EL Fine]: sql: 2017-05-05 22:53:45.327--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCITIZENS(ID,DNI,APELLIDOS,DIRECCION,EMAIL,FECHANACIMIENTO,NACIONALIDAD,NOMBRE,PASSWORD,USUARIO) VALUES (5,'45654465V','Rodriguez','direccion5','borja@gmail.com','1995-07-28','espa','Borja','llFh9oTmjUI=','Borja_borja');
-[EL Fine]: sql: 2017-05-05 22:53:45.328--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCITIZENS(ID,DNI,APELLIDOS,DIRECCION,EMAIL,FECHANACIMIENTO,NACIONALIDAD,NOMBRE,PASSWORD,USUARIO) VALUES (6,'56767567Q','Fernandez','direccion6','ruben@gmail.com','1993-03-02','espa','Ruben','llFh9oTmjUI=','Ruben_ruben');
-[EL Fine]: sql: 2017-05-05 22:53:45.328--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCITIZENS(ID,DNI,APELLIDOS,DIRECCION,EMAIL,FECHANACIMIENTO,NACIONALIDAD,NOMBRE,PASSWORD,USUARIO) VALUES (7,'38769345L','Ramon','direccion7','juan@gmail.com','1994-08-21','espa','Juan','llFh9oTmjUI=','Juan_juan');
-[EL Fine]: sql: 2017-05-05 22:53:45.329--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCITIZENS(ID,DNI,APELLIDOS,DIRECCION,EMAIL,FECHANACIMIENTO,NACIONALIDAD,NOMBRE,PASSWORD,USUARIO) VALUES (8,'67569789I','Garcia','direccion8','laura@gmail.com','1991-12-10','espa','Laura','llFh9oTmjUI=','Laura_laura');
-[EL Fine]: sql: 2017-05-05 22:53:45.329--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCITIZENS(ID,DNI,APELLIDOS,DIRECCION,EMAIL,FECHANACIMIENTO,NACIONALIDAD,NOMBRE,PASSWORD,USUARIO) VALUES (9,'67569789Z','Garcia','direccion8','laura@gmail.es','1991-12-10','espa','Laura','user1','user1');
-[EL Fine]: sql: 2017-05-05 22:53:45.33--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCATEGORIA(ID,FECHAFIN,FECHAINICIO,MINIMOVOTOS,NOMBRE) VALUES (1,'2000-01-01','2050-01-01','5','CategoriaDefecto')
-[EL Fine]: sql: 2017-05-05 22:53:45.33--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCATEGORIA(ID,FECHAFIN,FECHAINICIO,MINIMOVOTOS,NOMBRE) VALUES (2,'2017-10-04','2017-01-04','5','Categoria1')
-[EL Fine]: sql: 2017-05-05 22:53:45.331--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCATEGORIA(ID,FECHAFIN,FECHAINICIO,MINIMOVOTOS,NOMBRE) VALUES (3,'2017-10-12','2017-01-01','2','Categoria2')
-[EL Fine]: sql: 2017-05-05 22:53:45.331--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCATEGORIA(ID,FECHAFIN,FECHAINICIO,MINIMOVOTOS,NOMBRE) VALUES (4,'2017-10-04','2017-01-04','3','Categoria3')
-[EL Fine]: sql: 2017-05-05 22:53:45.332--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCATEGORIA(ID,FECHAFIN,FECHAINICIO,MINIMOVOTOS,NOMBRE) VALUES (5,'2017-10-03','2017-01-02','5','Categoria4')
-[EL Fine]: sql: 2017-05-05 22:53:45.332--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (2,'prueba')
-[EL Fine]: sql: 2017-05-05 22:53:45.332--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (2,'prueba2')
-[EL Fine]: sql: 2017-05-05 22:53:45.333--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (2,'prueba3')
-[EL Fine]: sql: 2017-05-05 22:53:45.333--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (3,'prueba')
-[EL Fine]: sql: 2017-05-05 22:53:45.333--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (3,'prueba2')
-[EL Fine]: sql: 2017-05-05 22:53:45.333--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (3,'prueba3')
-[EL Fine]: sql: 2017-05-05 22:53:45.334--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (4,'prueba')
-[EL Fine]: sql: 2017-05-05 22:53:45.334--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (4,'prueba2')
-[EL Fine]: sql: 2017-05-05 22:53:45.334--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (4,'prueba3')
-[EL Fine]: sql: 2017-05-05 22:53:45.334--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (5,'prueba')
-[EL Fine]: sql: 2017-05-05 22:53:45.335--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (5,'prueba2')
-[EL Fine]: sql: 2017-05-05 22:53:45.335--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (5,'prueba3')
-[EL Fine]: sql: 2017-05-05 22:53:45.335--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (1,'contenido de la primera sugerencia','Aceptada','Sugerencia1',5,9)
-[EL Fine]: sql: 2017-05-05 22:53:45.336--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (2,'contenido de la segunda sugerencia','EnVotacion','Sugerencia2',5,2)
-[EL Fine]: sql: 2017-05-05 22:53:45.336--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (3,'contenido de la tercera sugerencia','EnVotacion','Sugerencia3',5,4)
-[EL Fine]: sql: 2017-05-05 22:53:45.337--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (4,'contenido de la cuarta sugerencia','EnVotacion','Sugerencia4',5,8)
-[EL Fine]: sql: 2017-05-05 22:53:45.337--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (5,'contenido de la quinta sugerencia','EnVotacion','Sugerencia5',2,1)
-[EL Fine]: sql: 2017-05-05 22:53:45.338--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (6,'contenido de la sexta sugerencia','EnVotacion','Sugerencia6',2,3)
-[EL Fine]: sql: 2017-05-05 22:53:45.338--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (7,'contenido de la septima sugerencia','Anulada','Sugerencia7',2,3)
-[EL Fine]: sql: 2017-05-05 22:53:45.338--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (8,'contenido de la octava sugerencia','EnVotacion','Sugerencia8',2,1)
-[EL Fine]: sql: 2017-05-05 22:53:45.339--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (9,'contenido de la novena sugerencia','EnVotacion','Sugerencia9',3,2)
-[EL Fine]: sql: 2017-05-05 22:53:45.339--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (10,'contenido de la decima sugerencia','EnVotacion','Sugerencia10',3,5)
-[EL Fine]: sql: 2017-05-05 22:53:45.34--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (11,'contenido de la undecima sugerencia','EnVotacion','Sugerencia11',3,6)
-[EL Fine]: sql: 2017-05-05 22:53:45.34--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (12,'contenido de la duodecima sugerencia','EnVotacion','Sugerencia12',3,7)
-[EL Fine]: sql: 2017-05-05 22:53:45.341--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (13,'contenido de la decimotercera sugerencia','EnVotacion','Sugerencia13',5,1)
-[EL Fine]: sql: 2017-05-05 22:53:45.341--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (14,'contenido de la decimocuarta sugerencia','EnVotacion','Sugerencia14',5,2)
-[EL Fine]: sql: 2017-05-05 22:53:45.342--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (15,'contenido de la decimoquinta sugerencia','EnVotacion','Sugerencia15',4,5)
-[EL Fine]: sql: 2017-05-05 22:53:45.342--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (16,'contenido de la decimosexta sugerencia','EnVotacion','Sugerencia16',4,4)
-[EL Fine]: sql: 2017-05-05 22:53:45.343--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (17,'contenido de la decimoseptima sugerencia','Anulada','Sugerencia17',4,8)
-[EL Fine]: sql: 2017-05-05 22:53:45.343--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (18,'contenido de la decimooctava sugerencia','Aceptada','Sugerencia18',4,2)
-[EL Fine]: sql: 2017-05-05 22:53:45.344--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (19,'contenido de la decimonovena sugerencia','Aceptada','Sugerencia19',4,7)
-[EL Fine]: sql: 2017-05-05 22:53:45.344--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCOMENTARIO(ID,CONTENIDO,CITIZEN_ID,SUGERENCIA_ID) VALUES (1,'contenido primer comentario',1,1)
-[EL Fine]: sql: 2017-05-05 22:53:45.345--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCOMENTARIO(ID,CONTENIDO,CITIZEN_ID,SUGERENCIA_ID) VALUES (2,'contenido segundo comentario',2,1)
-[EL Fine]: sql: 2017-05-05 22:53:45.345--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCOMENTARIO(ID,CONTENIDO,CITIZEN_ID,SUGERENCIA_ID) VALUES (3,'contenido tercer comentario',1,1)
-[EL Fine]: sql: 2017-05-05 22:53:45.346--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,1,1)
-[EL Fine]: sql: 2017-05-05 22:53:45.347--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,2,1)
-[EL Fine]: sql: 2017-05-05 22:53:45.347--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (FALSE,3,1)
-[EL Fine]: sql: 2017-05-05 22:53:45.348--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,4,1)
-[EL Fine]: sql: 2017-05-05 22:53:45.348--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,5,1)
-[EL Fine]: sql: 2017-05-05 22:53:45.348--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,6,1)
-[EL Fine]: sql: 2017-05-05 22:53:45.349--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,7,1)
-[EL Fine]: sql: 2017-05-05 22:53:45.349--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,8,1)
-[EL Fine]: sql: 2017-05-05 22:53:45.35--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,1,2)
-[EL Fine]: sql: 2017-05-05 22:53:45.35--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,2,2)
-[EL Fine]: sql: 2017-05-05 22:53:45.351--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,3,2)
-[EL Fine]: sql: 2017-05-05 22:53:45.351--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,4,2)
-[EL Fine]: sql: 2017-05-05 22:53:45.351--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,1,3)
-[EL Fine]: sql: 2017-05-05 22:53:45.352--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,2,3)
-[EL Fine]: sql: 2017-05-05 22:53:45.353--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (FALSE,3,3)
-[EL Fine]: sql: 2017-05-05 22:53:45.353--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,4,3)
-[EL Fine]: sql: 2017-05-05 22:53:45.353--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,1,1)
-[EL Fine]: sql: 2017-05-05 22:53:45.354--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,2,1)
-[EL Fine]: sql: 2017-05-05 22:53:45.354--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (FALSE,3,1)
-[EL Fine]: sql: 2017-05-05 22:53:45.355--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,4,1)
-[EL Fine]: sql: 2017-05-05 22:53:45.355--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,1,2)
-[EL Fine]: sql: 2017-05-05 22:53:45.355--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,2,2)
-[EL Fine]: sql: 2017-05-05 22:53:45.356--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,3,2)
-[EL Fine]: sql: 2017-05-05 22:53:45.356--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,4,2)
-[EL Fine]: sql: 2017-05-05 22:53:45.356--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,1,3)
-[EL Fine]: sql: 2017-05-05 22:53:45.356--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,2,3)
-[EL Fine]: sql: 2017-05-05 22:53:45.357--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (FALSE,3,3)
-[EL Fine]: sql: 2017-05-05 22:53:45.357--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,4,3)
-[EL Fine]: sql: 2017-05-05 22:53:45.357--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,1,18)
-[EL Fine]: sql: 2017-05-05 22:53:45.358--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,2,18)
-[EL Fine]: sql: 2017-05-05 22:53:45.358--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (FALSE,3,18)
-[EL Fine]: sql: 2017-05-05 22:53:45.358--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,4,18)
-[EL Fine]: sql: 2017-05-05 22:53:45.358--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,7,18)
-[EL Fine]: sql: 2017-05-05 22:53:45.359--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,8,18)
-[EL Fine]: sql: 2017-05-05 22:53:45.359--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,1,19)
-[EL Fine]: sql: 2017-05-05 22:53:45.359--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,2,19)
-[EL Fine]: sql: 2017-05-05 22:53:45.359--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (FALSE,3,19)
-[EL Fine]: sql: 2017-05-05 22:53:45.36--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,4,19)
-[EL Fine]: sql: 2017-05-05 22:53:45.36--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,7,19)
-[EL Fine]: sql: 2017-05-05 22:53:45.361--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,8,19)
-[EL Fine]: sql: 2017-05-05 22:53:45.361--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,5,19)
-[EL Fine]: sql: 2017-05-05 22:53:45.388--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--SELECT ID, CONTENIDO, ESTADO, TITULO, CATEGORIA_ID, CITIZEN_ID FROM TSUGERENCIA
-[EL Fine]: sql: 2017-05-05 22:53:45.4--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--SELECT ID, FECHAFIN, FECHAINICIO, MINIMOVOTOS, NOMBRE FROM TCATEGORIA WHERE (ID = ?)
+[EL Fine]: sql: 2017-05-08 16:37:54.399--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--CREATE TABLE TVOTOCOMENTARIO (ISAFAVOR BOOLEAN, CITIZEN_ID BIGINT NOT NULL, COMENTARIO_ID BIGINT NOT NULL, PRIMARY KEY (CITIZEN_ID, COMENTARIO_ID))
+[EL Fine]: sql: 2017-05-08 16:37:54.411--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--CREATE TABLE TADMINISTRADOR (ID BIGINT IDENTITY NOT NULL, PASSWORD VARCHAR, USUARIO VARCHAR, PRIMARY KEY (ID))
+[EL Fine]: sql: 2017-05-08 16:37:54.421--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--CREATE TABLE TCOMENTARIO (ID BIGINT IDENTITY NOT NULL, CONTENIDO VARCHAR, CITIZEN_ID BIGINT, SUGERENCIA_ID BIGINT, PRIMARY KEY (ID))
+[EL Fine]: sql: 2017-05-08 16:37:54.425--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--CREATE TABLE TSUGERENCIA (ID BIGINT IDENTITY NOT NULL, CONTENIDO VARCHAR, ESTADO VARCHAR, TITULO VARCHAR, CATEGORIA_ID BIGINT, CITIZEN_ID BIGINT, PRIMARY KEY (ID))
+[EL Fine]: sql: 2017-05-08 16:37:54.428--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--CREATE TABLE TVOTOSUGERENCIA (ISAFAVOR BOOLEAN, CITIZEN_ID BIGINT NOT NULL, SUGERENCIA_ID BIGINT NOT NULL, PRIMARY KEY (CITIZEN_ID, SUGERENCIA_ID))
+[EL Fine]: sql: 2017-05-08 16:37:54.431--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--CREATE TABLE TCATEGORIA (ID BIGINT IDENTITY NOT NULL, FECHAFIN DATE, FECHAINICIO DATE, MINIMOVOTOS INTEGER, NOMBRE VARCHAR, PRIMARY KEY (ID))
+[EL Fine]: sql: 2017-05-08 16:37:54.436--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--CREATE TABLE TCITIZENS (ID BIGINT IDENTITY NOT NULL, DNI VARCHAR, APELLIDOS VARCHAR, DIRECCION VARCHAR, EMAIL VARCHAR, FECHANACIMIENTO DATE, NACIONALIDAD VARCHAR, NOMBRE VARCHAR, PASSWORD VARCHAR, USUARIO VARCHAR, PRIMARY KEY (ID))
+[EL Fine]: sql: 2017-05-08 16:37:54.439--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--CREATE TABLE TPALABRAS (Categoria_ID BIGINT, PALABRA VARCHAR)
+[EL Fine]: sql: 2017-05-08 16:37:54.44--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TVOTOCOMENTARIO ADD CONSTRAINT FK_TVOTOCOMENTARIO_COMENTARIO_ID FOREIGN KEY (COMENTARIO_ID) REFERENCES TCOMENTARIO (ID)
+[EL Fine]: sql: 2017-05-08 16:37:54.477--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TVOTOCOMENTARIO ADD CONSTRAINT FK_TVOTOCOMENTARIO_CITIZEN_ID FOREIGN KEY (CITIZEN_ID) REFERENCES TCITIZENS (ID)
+[EL Fine]: sql: 2017-05-08 16:37:54.48--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TCOMENTARIO ADD CONSTRAINT FK_TCOMENTARIO_CITIZEN_ID FOREIGN KEY (CITIZEN_ID) REFERENCES TCITIZENS (ID)
+[EL Fine]: sql: 2017-05-08 16:37:54.485--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TCOMENTARIO ADD CONSTRAINT FK_TCOMENTARIO_SUGERENCIA_ID FOREIGN KEY (SUGERENCIA_ID) REFERENCES TSUGERENCIA (ID)
+[EL Fine]: sql: 2017-05-08 16:37:54.49--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TSUGERENCIA ADD CONSTRAINT FK_TSUGERENCIA_CATEGORIA_ID FOREIGN KEY (CATEGORIA_ID) REFERENCES TCATEGORIA (ID)
+[EL Fine]: sql: 2017-05-08 16:37:54.493--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TSUGERENCIA ADD CONSTRAINT FK_TSUGERENCIA_CITIZEN_ID FOREIGN KEY (CITIZEN_ID) REFERENCES TCITIZENS (ID)
+[EL Fine]: sql: 2017-05-08 16:37:54.496--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TVOTOSUGERENCIA ADD CONSTRAINT FK_TVOTOSUGERENCIA_CITIZEN_ID FOREIGN KEY (CITIZEN_ID) REFERENCES TCITIZENS (ID)
+[EL Fine]: sql: 2017-05-08 16:37:54.499--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TVOTOSUGERENCIA ADD CONSTRAINT FK_TVOTOSUGERENCIA_SUGERENCIA_ID FOREIGN KEY (SUGERENCIA_ID) REFERENCES TSUGERENCIA (ID)
+[EL Fine]: sql: 2017-05-08 16:37:54.502--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--ALTER TABLE TPALABRAS ADD CONSTRAINT FK_TPALABRAS_Categoria_ID FOREIGN KEY (Categoria_ID) REFERENCES TCATEGORIA (ID)
+[EL Fine]: sql: 2017-05-08 16:37:54.505--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TADMINISTRADOR(ID,PASSWORD,USUARIO) VALUES (1,'admin','admin')
+[EL Fine]: sql: 2017-05-08 16:37:54.508--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TADMINISTRADOR(ID,PASSWORD,USUARIO) VALUES (2,'admin2','admin2')
+[EL Fine]: sql: 2017-05-08 16:37:54.509--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TADMINISTRADOR(ID,PASSWORD,USUARIO) VALUES (3,'admin3','admin3')
+[EL Fine]: sql: 2017-05-08 16:37:54.51--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCITIZENS(ID,DNI,APELLIDOS,DIRECCION,EMAIL,FECHANACIMIENTO,NACIONALIDAD,NOMBRE,PASSWORD,USUARIO) VALUES (1,'71435345N','Prada','direccion','seila@gmail.com','1996-01-15','espa','Seila','llFh9oTmjUI=','Seila_seila');
+[EL Fine]: sql: 2017-05-08 16:37:54.513--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCITIZENS(ID,DNI,APELLIDOS,DIRECCION,EMAIL,FECHANACIMIENTO,NACIONALIDAD,NOMBRE,PASSWORD,USUARIO) VALUES (2,'72344554T','Prada','direccion2','seila2@gmail.com','1996-01-15','espa','Seila2','llFh9oTmjUI=','Seila2_seila');
+[EL Fine]: sql: 2017-05-08 16:37:54.514--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCITIZENS(ID,DNI,APELLIDOS,DIRECCION,EMAIL,FECHANACIMIENTO,NACIONALIDAD,NOMBRE,PASSWORD,USUARIO) VALUES (3,'74564534E','Prada','direccion3','seila3@gmail.com','1996-01-15','espa','Seila3','llFh9oTmjUI=','Seila3_seila');
+[EL Fine]: sql: 2017-05-08 16:37:54.515--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCITIZENS(ID,DNI,APELLIDOS,DIRECCION,EMAIL,FECHANACIMIENTO,NACIONALIDAD,NOMBRE,PASSWORD,USUARIO) VALUES (4,'45654665K','Watson','direccion4','david@gmail.com','1986-04-19','eng','David','llFh9oTmjUI=','David_david');
+[EL Fine]: sql: 2017-05-08 16:37:54.517--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCITIZENS(ID,DNI,APELLIDOS,DIRECCION,EMAIL,FECHANACIMIENTO,NACIONALIDAD,NOMBRE,PASSWORD,USUARIO) VALUES (5,'45654465V','Rodriguez','direccion5','borja@gmail.com','1995-07-28','espa','Borja','llFh9oTmjUI=','Borja_borja');
+[EL Fine]: sql: 2017-05-08 16:37:54.518--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCITIZENS(ID,DNI,APELLIDOS,DIRECCION,EMAIL,FECHANACIMIENTO,NACIONALIDAD,NOMBRE,PASSWORD,USUARIO) VALUES (6,'56767567Q','Fernandez','direccion6','ruben@gmail.com','1993-03-02','espa','Ruben','llFh9oTmjUI=','Ruben_ruben');
+[EL Fine]: sql: 2017-05-08 16:37:54.519--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCITIZENS(ID,DNI,APELLIDOS,DIRECCION,EMAIL,FECHANACIMIENTO,NACIONALIDAD,NOMBRE,PASSWORD,USUARIO) VALUES (7,'38769345L','Ramon','direccion7','juan@gmail.com','1994-08-21','espa','Juan','llFh9oTmjUI=','Juan_juan');
+[EL Fine]: sql: 2017-05-08 16:37:54.519--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCITIZENS(ID,DNI,APELLIDOS,DIRECCION,EMAIL,FECHANACIMIENTO,NACIONALIDAD,NOMBRE,PASSWORD,USUARIO) VALUES (8,'67569789I','Garcia','direccion8','laura@gmail.com','1991-12-10','espa','Laura','llFh9oTmjUI=','Laura_laura');
+[EL Fine]: sql: 2017-05-08 16:37:54.52--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCITIZENS(ID,DNI,APELLIDOS,DIRECCION,EMAIL,FECHANACIMIENTO,NACIONALIDAD,NOMBRE,PASSWORD,USUARIO) VALUES (9,'67569789Z','Garcia','direccion8','laura@gmail.es','1991-12-10','espa','Laura','user1','user1');
+[EL Fine]: sql: 2017-05-08 16:37:54.522--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCATEGORIA(ID,FECHAFIN,FECHAINICIO,MINIMOVOTOS,NOMBRE) VALUES (1,'2000-01-01','2050-01-01','5','CategoriaDefecto')
+[EL Fine]: sql: 2017-05-08 16:37:54.522--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCATEGORIA(ID,FECHAFIN,FECHAINICIO,MINIMOVOTOS,NOMBRE) VALUES (2,'2017-10-04','2017-01-04','5','Categoria1')
+[EL Fine]: sql: 2017-05-08 16:37:54.523--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCATEGORIA(ID,FECHAFIN,FECHAINICIO,MINIMOVOTOS,NOMBRE) VALUES (3,'2017-10-12','2017-01-01','2','Categoria2')
+[EL Fine]: sql: 2017-05-08 16:37:54.524--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCATEGORIA(ID,FECHAFIN,FECHAINICIO,MINIMOVOTOS,NOMBRE) VALUES (4,'2017-10-04','2017-01-04','3','Categoria3')
+[EL Fine]: sql: 2017-05-08 16:37:54.525--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCATEGORIA(ID,FECHAFIN,FECHAINICIO,MINIMOVOTOS,NOMBRE) VALUES (5,'2017-10-03','2017-01-02','5','Categoria4')
+[EL Fine]: sql: 2017-05-08 16:37:54.526--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (2,'prueba')
+[EL Fine]: sql: 2017-05-08 16:37:54.526--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (2,'prueba2')
+[EL Fine]: sql: 2017-05-08 16:37:54.527--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (2,'prueba3')
+[EL Fine]: sql: 2017-05-08 16:37:54.528--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (3,'prueba')
+[EL Fine]: sql: 2017-05-08 16:37:54.528--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (3,'prueba2')
+[EL Fine]: sql: 2017-05-08 16:37:54.529--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (3,'prueba3')
+[EL Fine]: sql: 2017-05-08 16:37:54.529--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (4,'prueba')
+[EL Fine]: sql: 2017-05-08 16:37:54.529--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (4,'prueba2')
+[EL Fine]: sql: 2017-05-08 16:37:54.53--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (4,'prueba3')
+[EL Fine]: sql: 2017-05-08 16:37:54.53--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (5,'prueba')
+[EL Fine]: sql: 2017-05-08 16:37:54.53--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (5,'prueba2')
+[EL Fine]: sql: 2017-05-08 16:37:54.531--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TPALABRAS(CATEGORIA_ID,PALABRA) VALUES (5,'prueba3')
+[EL Fine]: sql: 2017-05-08 16:37:54.531--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (1,'contenido de la primera sugerencia','Aceptada','Sugerencia1',5,9)
+[EL Fine]: sql: 2017-05-08 16:37:54.532--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (2,'contenido de la segunda sugerencia','EnVotacion','Sugerencia2',5,2)
+[EL Fine]: sql: 2017-05-08 16:37:54.533--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (3,'contenido de la tercera sugerencia','EnVotacion','Sugerencia3',5,4)
+[EL Fine]: sql: 2017-05-08 16:37:54.533--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (4,'contenido de la cuarta sugerencia','EnVotacion','Sugerencia4',5,8)
+[EL Fine]: sql: 2017-05-08 16:37:54.534--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (5,'contenido de la quinta sugerencia','EnVotacion','Sugerencia5',2,1)
+[EL Fine]: sql: 2017-05-08 16:37:54.535--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (6,'contenido de la sexta sugerencia','EnVotacion','Sugerencia6',2,3)
+[EL Fine]: sql: 2017-05-08 16:37:54.536--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (7,'contenido de la septima sugerencia','Anulada','Sugerencia7',2,3)
+[EL Fine]: sql: 2017-05-08 16:37:54.536--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (8,'contenido de la octava sugerencia','EnVotacion','Sugerencia8',2,1)
+[EL Fine]: sql: 2017-05-08 16:37:54.537--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (9,'contenido de la novena sugerencia','EnVotacion','Sugerencia9',3,2)
+[EL Fine]: sql: 2017-05-08 16:37:54.538--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (10,'contenido de la decima sugerencia','EnVotacion','Sugerencia10',3,5)
+[EL Fine]: sql: 2017-05-08 16:37:54.539--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (11,'contenido de la undecima sugerencia','EnVotacion','Sugerencia11',3,6)
+[EL Fine]: sql: 2017-05-08 16:37:54.539--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (12,'contenido de la duodecima sugerencia','EnVotacion','Sugerencia12',3,7)
+[EL Fine]: sql: 2017-05-08 16:37:54.54--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (13,'contenido de la decimotercera sugerencia','EnVotacion','Sugerencia13',5,1)
+[EL Fine]: sql: 2017-05-08 16:37:54.541--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (14,'contenido de la decimocuarta sugerencia','EnVotacion','Sugerencia14',5,2)
+[EL Fine]: sql: 2017-05-08 16:37:54.543--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (15,'contenido de la decimoquinta sugerencia','EnVotacion','Sugerencia15',4,5)
+[EL Fine]: sql: 2017-05-08 16:37:54.543--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (16,'contenido de la decimosexta sugerencia','EnVotacion','Sugerencia16',4,4)
+[EL Fine]: sql: 2017-05-08 16:37:54.544--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (17,'contenido de la decimoseptima sugerencia','Anulada','Sugerencia17',4,8)
+[EL Fine]: sql: 2017-05-08 16:37:54.545--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (18,'contenido de la decimooctava sugerencia','Aceptada','Sugerencia18',4,2)
+[EL Fine]: sql: 2017-05-08 16:37:54.545--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TSUGERENCIA(ID,CONTENIDO,ESTADO,TITULO,CATEGORIA_ID,CITIZEN_ID) VALUES (19,'contenido de la decimonovena sugerencia','Aceptada','Sugerencia19',4,7)
+[EL Fine]: sql: 2017-05-08 16:37:54.546--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCOMENTARIO(ID,CONTENIDO,CITIZEN_ID,SUGERENCIA_ID) VALUES (1,'contenido primer comentario',1,1)
+[EL Fine]: sql: 2017-05-08 16:37:54.547--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCOMENTARIO(ID,CONTENIDO,CITIZEN_ID,SUGERENCIA_ID) VALUES (2,'contenido segundo comentario',2,1)
+[EL Fine]: sql: 2017-05-08 16:37:54.548--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TCOMENTARIO(ID,CONTENIDO,CITIZEN_ID,SUGERENCIA_ID) VALUES (3,'contenido tercer comentario',1,1)
+[EL Fine]: sql: 2017-05-08 16:37:54.549--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,1,1)
+[EL Fine]: sql: 2017-05-08 16:37:54.55--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,2,1)
+[EL Fine]: sql: 2017-05-08 16:37:54.551--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (FALSE,3,1)
+[EL Fine]: sql: 2017-05-08 16:37:54.552--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,4,1)
+[EL Fine]: sql: 2017-05-08 16:37:54.552--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,5,1)
+[EL Fine]: sql: 2017-05-08 16:37:54.553--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,6,1)
+[EL Fine]: sql: 2017-05-08 16:37:54.553--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,7,1)
+[EL Fine]: sql: 2017-05-08 16:37:54.554--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,8,1)
+[EL Fine]: sql: 2017-05-08 16:37:54.555--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,1,2)
+[EL Fine]: sql: 2017-05-08 16:37:54.556--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,2,2)
+[EL Fine]: sql: 2017-05-08 16:37:54.557--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,3,2)
+[EL Fine]: sql: 2017-05-08 16:37:54.557--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,4,2)
+[EL Fine]: sql: 2017-05-08 16:37:54.558--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,1,3)
+[EL Fine]: sql: 2017-05-08 16:37:54.559--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,2,3)
+[EL Fine]: sql: 2017-05-08 16:37:54.56--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (FALSE,3,3)
+[EL Fine]: sql: 2017-05-08 16:37:54.561--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOCOMENTARIO(ISAFAVOR,CITIZEN_ID,COMENTARIO_ID) VALUES (TRUE,4,3)
+[EL Fine]: sql: 2017-05-08 16:37:54.562--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,1,1)
+[EL Fine]: sql: 2017-05-08 16:37:54.563--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,2,1)
+[EL Fine]: sql: 2017-05-08 16:37:54.564--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (FALSE,3,1)
+[EL Fine]: sql: 2017-05-08 16:37:54.565--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,4,1)
+[EL Fine]: sql: 2017-05-08 16:37:54.566--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,1,2)
+[EL Fine]: sql: 2017-05-08 16:37:54.567--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,2,2)
+[EL Fine]: sql: 2017-05-08 16:37:54.568--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,3,2)
+[EL Fine]: sql: 2017-05-08 16:37:54.568--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,4,2)
+[EL Fine]: sql: 2017-05-08 16:37:54.569--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,1,3)
+[EL Fine]: sql: 2017-05-08 16:37:54.57--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,2,3)
+[EL Fine]: sql: 2017-05-08 16:37:54.571--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (FALSE,3,3)
+[EL Fine]: sql: 2017-05-08 16:37:54.572--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,4,3)
+[EL Fine]: sql: 2017-05-08 16:37:54.573--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,1,18)
+[EL Fine]: sql: 2017-05-08 16:37:54.574--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,2,18)
+[EL Fine]: sql: 2017-05-08 16:37:54.575--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (FALSE,3,18)
+[EL Fine]: sql: 2017-05-08 16:37:54.576--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,4,18)
+[EL Fine]: sql: 2017-05-08 16:37:54.576--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,7,18)
+[EL Fine]: sql: 2017-05-08 16:37:54.577--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,8,18)
+[EL Fine]: sql: 2017-05-08 16:37:54.577--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,1,19)
+[EL Fine]: sql: 2017-05-08 16:37:54.578--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,2,19)
+[EL Fine]: sql: 2017-05-08 16:37:54.578--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (FALSE,3,19)
+[EL Fine]: sql: 2017-05-08 16:37:54.579--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,4,19)
+[EL Fine]: sql: 2017-05-08 16:37:54.579--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,7,19)
+[EL Fine]: sql: 2017-05-08 16:37:54.58--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,8,19)
+[EL Fine]: sql: 2017-05-08 16:37:54.581--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--INSERT INTO TVOTOSUGERENCIA(ISAFAVOR,CITIZEN_ID,SUGERENCIA_ID) VALUES (TRUE,5,19)
+[EL Fine]: sql: 2017-05-08 16:37:54.623--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--SELECT ID, CONTENIDO, ESTADO, TITULO, CATEGORIA_ID, CITIZEN_ID FROM TSUGERENCIA
+[EL Fine]: sql: 2017-05-08 16:37:54.641--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--SELECT ID, FECHAFIN, FECHAINICIO, MINIMOVOTOS, NOMBRE FROM TCATEGORIA WHERE (ID = ?)
 	bind => [5]
-[EL Fine]: sql: 2017-05-05 22:53:45.403--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--SELECT ID, DNI, APELLIDOS, DIRECCION, EMAIL, FECHANACIMIENTO, NACIONALIDAD, NOMBRE, PASSWORD, USUARIO FROM TCITIZENS WHERE (ID = ?)
+[EL Fine]: sql: 2017-05-08 16:37:54.645--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--SELECT ID, DNI, APELLIDOS, DIRECCION, EMAIL, FECHANACIMIENTO, NACIONALIDAD, NOMBRE, PASSWORD, USUARIO FROM TCITIZENS WHERE (ID = ?)
 	bind => [9]
-[EL Fine]: sql: 2017-05-05 22:53:45.407--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--SELECT ID, DNI, APELLIDOS, DIRECCION, EMAIL, FECHANACIMIENTO, NACIONALIDAD, NOMBRE, PASSWORD, USUARIO FROM TCITIZENS WHERE (ID = ?)
+[EL Fine]: sql: 2017-05-08 16:37:54.651--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--SELECT ID, DNI, APELLIDOS, DIRECCION, EMAIL, FECHANACIMIENTO, NACIONALIDAD, NOMBRE, PASSWORD, USUARIO FROM TCITIZENS WHERE (ID = ?)
 	bind => [2]
-[EL Fine]: sql: 2017-05-05 22:53:45.408--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--SELECT ID, DNI, APELLIDOS, DIRECCION, EMAIL, FECHANACIMIENTO, NACIONALIDAD, NOMBRE, PASSWORD, USUARIO FROM TCITIZENS WHERE (ID = ?)
+[EL Fine]: sql: 2017-05-08 16:37:54.653--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--SELECT ID, DNI, APELLIDOS, DIRECCION, EMAIL, FECHANACIMIENTO, NACIONALIDAD, NOMBRE, PASSWORD, USUARIO FROM TCITIZENS WHERE (ID = ?)
 	bind => [4]
-[EL Fine]: sql: 2017-05-05 22:53:45.409--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--SELECT ID, DNI, APELLIDOS, DIRECCION, EMAIL, FECHANACIMIENTO, NACIONALIDAD, NOMBRE, PASSWORD, USUARIO FROM TCITIZENS WHERE (ID = ?)
+[EL Fine]: sql: 2017-05-08 16:37:54.654--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--SELECT ID, DNI, APELLIDOS, DIRECCION, EMAIL, FECHANACIMIENTO, NACIONALIDAD, NOMBRE, PASSWORD, USUARIO FROM TCITIZENS WHERE (ID = ?)
 	bind => [8]
-[EL Fine]: sql: 2017-05-05 22:53:45.409--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--SELECT ID, FECHAFIN, FECHAINICIO, MINIMOVOTOS, NOMBRE FROM TCATEGORIA WHERE (ID = ?)
+[EL Fine]: sql: 2017-05-08 16:37:54.655--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--SELECT ID, FECHAFIN, FECHAINICIO, MINIMOVOTOS, NOMBRE FROM TCATEGORIA WHERE (ID = ?)
 	bind => [2]
-[EL Fine]: sql: 2017-05-05 22:53:45.41--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--SELECT ID, DNI, APELLIDOS, DIRECCION, EMAIL, FECHANACIMIENTO, NACIONALIDAD, NOMBRE, PASSWORD, USUARIO FROM TCITIZENS WHERE (ID = ?)
+[EL Fine]: sql: 2017-05-08 16:37:54.656--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--SELECT ID, DNI, APELLIDOS, DIRECCION, EMAIL, FECHANACIMIENTO, NACIONALIDAD, NOMBRE, PASSWORD, USUARIO FROM TCITIZENS WHERE (ID = ?)
 	bind => [1]
-[EL Fine]: sql: 2017-05-05 22:53:45.411--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--SELECT ID, DNI, APELLIDOS, DIRECCION, EMAIL, FECHANACIMIENTO, NACIONALIDAD, NOMBRE, PASSWORD, USUARIO FROM TCITIZENS WHERE (ID = ?)
+[EL Fine]: sql: 2017-05-08 16:37:54.658--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--SELECT ID, DNI, APELLIDOS, DIRECCION, EMAIL, FECHANACIMIENTO, NACIONALIDAD, NOMBRE, PASSWORD, USUARIO FROM TCITIZENS WHERE (ID = ?)
 	bind => [3]
-[EL Fine]: sql: 2017-05-05 22:53:45.413--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--SELECT ID, FECHAFIN, FECHAINICIO, MINIMOVOTOS, NOMBRE FROM TCATEGORIA WHERE (ID = ?)
+[EL Fine]: sql: 2017-05-08 16:37:54.66--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--SELECT ID, FECHAFIN, FECHAINICIO, MINIMOVOTOS, NOMBRE FROM TCATEGORIA WHERE (ID = ?)
 	bind => [3]
-[EL Fine]: sql: 2017-05-05 22:53:45.414--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--SELECT ID, DNI, APELLIDOS, DIRECCION, EMAIL, FECHANACIMIENTO, NACIONALIDAD, NOMBRE, PASSWORD, USUARIO FROM TCITIZENS WHERE (ID = ?)
+[EL Fine]: sql: 2017-05-08 16:37:54.662--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--SELECT ID, DNI, APELLIDOS, DIRECCION, EMAIL, FECHANACIMIENTO, NACIONALIDAD, NOMBRE, PASSWORD, USUARIO FROM TCITIZENS WHERE (ID = ?)
 	bind => [5]
-[EL Fine]: sql: 2017-05-05 22:53:45.414--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--SELECT ID, DNI, APELLIDOS, DIRECCION, EMAIL, FECHANACIMIENTO, NACIONALIDAD, NOMBRE, PASSWORD, USUARIO FROM TCITIZENS WHERE (ID = ?)
+[EL Fine]: sql: 2017-05-08 16:37:54.663--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--SELECT ID, DNI, APELLIDOS, DIRECCION, EMAIL, FECHANACIMIENTO, NACIONALIDAD, NOMBRE, PASSWORD, USUARIO FROM TCITIZENS WHERE (ID = ?)
 	bind => [6]
-[EL Fine]: sql: 2017-05-05 22:53:45.415--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--SELECT ID, DNI, APELLIDOS, DIRECCION, EMAIL, FECHANACIMIENTO, NACIONALIDAD, NOMBRE, PASSWORD, USUARIO FROM TCITIZENS WHERE (ID = ?)
+[EL Fine]: sql: 2017-05-08 16:37:54.664--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--SELECT ID, DNI, APELLIDOS, DIRECCION, EMAIL, FECHANACIMIENTO, NACIONALIDAD, NOMBRE, PASSWORD, USUARIO FROM TCITIZENS WHERE (ID = ?)
 	bind => [7]
-[EL Fine]: sql: 2017-05-05 22:53:45.416--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--SELECT ID, FECHAFIN, FECHAINICIO, MINIMOVOTOS, NOMBRE FROM TCATEGORIA WHERE (ID = ?)
+[EL Fine]: sql: 2017-05-08 16:37:54.666--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--SELECT ID, FECHAFIN, FECHAINICIO, MINIMOVOTOS, NOMBRE FROM TCATEGORIA WHERE (ID = ?)
 	bind => [4]
-[EL Fine]: sql: 2017-05-05 22:53:45.424--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+[EL Fine]: sql: 2017-05-08 16:37:54.678--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
 	bind => [1]
-[EL Fine]: sql: 2017-05-05 22:53:45.428--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+[EL Fine]: sql: 2017-05-08 16:37:54.685--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
 	bind => [2]
-[EL Fine]: sql: 2017-05-05 22:53:45.43--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+[EL Fine]: sql: 2017-05-08 16:37:54.688--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
 	bind => [3]
-[EL Fine]: sql: 2017-05-05 22:53:45.432--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+[EL Fine]: sql: 2017-05-08 16:37:54.69--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
 	bind => [4]
-[EL Fine]: sql: 2017-05-05 22:53:45.432--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+[EL Fine]: sql: 2017-05-08 16:37:54.69--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
 	bind => [5]
-[EL Fine]: sql: 2017-05-05 22:53:45.432--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+[EL Fine]: sql: 2017-05-08 16:37:54.691--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
 	bind => [6]
-[EL Fine]: sql: 2017-05-05 22:53:45.432--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+[EL Fine]: sql: 2017-05-08 16:37:54.691--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
 	bind => [7]
-[EL Fine]: sql: 2017-05-05 22:53:45.433--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+[EL Fine]: sql: 2017-05-08 16:37:54.692--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
 	bind => [8]
-[EL Fine]: sql: 2017-05-05 22:53:45.433--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+[EL Fine]: sql: 2017-05-08 16:37:54.692--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
 	bind => [9]
-[EL Fine]: sql: 2017-05-05 22:53:45.433--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+[EL Fine]: sql: 2017-05-08 16:37:54.693--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
 	bind => [10]
-[EL Fine]: sql: 2017-05-05 22:53:45.433--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+[EL Fine]: sql: 2017-05-08 16:37:54.693--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
 	bind => [11]
-[EL Fine]: sql: 2017-05-05 22:53:45.434--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+[EL Fine]: sql: 2017-05-08 16:37:54.694--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
 	bind => [12]
-[EL Fine]: sql: 2017-05-05 22:53:45.434--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+[EL Fine]: sql: 2017-05-08 16:37:54.694--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
 	bind => [13]
-[EL Fine]: sql: 2017-05-05 22:53:45.434--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+[EL Fine]: sql: 2017-05-08 16:37:54.695--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
 	bind => [14]
-[EL Fine]: sql: 2017-05-05 22:53:45.435--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+[EL Fine]: sql: 2017-05-08 16:37:54.695--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
 	bind => [15]
-[EL Fine]: sql: 2017-05-05 22:53:45.435--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+[EL Fine]: sql: 2017-05-08 16:37:54.696--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
 	bind => [16]
-[EL Fine]: sql: 2017-05-05 22:53:45.436--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+[EL Fine]: sql: 2017-05-08 16:37:54.697--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
 	bind => [17]
-[EL Fine]: sql: 2017-05-05 22:53:45.436--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+[EL Fine]: sql: 2017-05-08 16:37:54.698--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
 	bind => [18]
-[EL Fine]: sql: 2017-05-05 22:53:45.438--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
+[EL Fine]: sql: 2017-05-08 16:37:54.701--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[restartedMain,5,main])--SELECT ISAFAVOR, CITIZEN_ID, SUGERENCIA_ID FROM TVOTOSUGERENCIA WHERE (SUGERENCIA_ID = ?)
 	bind => [19]
-[EL Fine]: sql: 2017-05-05 22:54:12.544--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[http-nio-8080-exec-5,5,main])--SELECT ID, PASSWORD, USUARIO FROM TADMINISTRADOR WHERE ((USUARIO = ?) AND (PASSWORD = ?))
+[EL Fine]: sql: 2017-05-08 16:38:17.748--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[http-nio-8080-exec-4,5,main])--SELECT ID, PASSWORD, USUARIO FROM TADMINISTRADOR WHERE ((USUARIO = ?) AND (PASSWORD = ?))
 	bind => [user1, user1]
-[EL Fine]: sql: 2017-05-05 22:54:12.548--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[http-nio-8080-exec-5,5,main])--SELECT ID, DNI, APELLIDOS, DIRECCION, EMAIL, FECHANACIMIENTO, NACIONALIDAD, NOMBRE, PASSWORD, USUARIO FROM TCITIZENS WHERE ((USUARIO = ?) AND (PASSWORD = ?))
+[EL Fine]: sql: 2017-05-08 16:38:17.753--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[http-nio-8080-exec-4,5,main])--SELECT ID, DNI, APELLIDOS, DIRECCION, EMAIL, FECHANACIMIENTO, NACIONALIDAD, NOMBRE, PASSWORD, USUARIO FROM TCITIZENS WHERE ((USUARIO = ?) AND (PASSWORD = ?))
 	bind => [user1, user1]
-[EL Fine]: sql: 2017-05-05 22:54:12.55--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[http-nio-8080-exec-5,5,main])--SELECT ID, CONTENIDO, ESTADO, TITULO, CATEGORIA_ID, CITIZEN_ID FROM TSUGERENCIA
-[EL Fine]: sql: 2017-05-05 22:54:12.569--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[http-nio-8080-exec-5,5,main])--SELECT ID, FECHAFIN, FECHAINICIO, MINIMOVOTOS, NOMBRE FROM TCATEGORIA WHERE (ID > ?)
+[EL Fine]: sql: 2017-05-08 16:38:17.756--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[http-nio-8080-exec-4,5,main])--SELECT ID, CONTENIDO, ESTADO, TITULO, CATEGORIA_ID, CITIZEN_ID FROM TSUGERENCIA
+[EL Fine]: sql: 2017-05-08 16:38:17.787--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[http-nio-8080-exec-4,5,main])--SELECT ID, FECHAFIN, FECHAINICIO, MINIMOVOTOS, NOMBRE FROM TCATEGORIA WHERE (ID > ?)
 	bind => [1]
-[EL Fine]: sql: 2017-05-05 22:54:12.571--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[http-nio-8080-exec-5,5,main])--SELECT ID, CONTENIDO, ESTADO, TITULO, CATEGORIA_ID, CITIZEN_ID FROM TSUGERENCIA WHERE (CITIZEN_ID = ?)
+[EL Fine]: sql: 2017-05-08 16:38:17.791--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[http-nio-8080-exec-4,5,main])--SELECT ID, CONTENIDO, ESTADO, TITULO, CATEGORIA_ID, CITIZEN_ID FROM TSUGERENCIA WHERE (CITIZEN_ID = ?)
 	bind => [9]
-[EL Fine]: sql: 2017-05-05 22:54:12.592--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[http-nio-8080-exec-5,5,main])--SELECT ID, CONTENIDO, ESTADO, TITULO, CATEGORIA_ID, CITIZEN_ID FROM TSUGERENCIA WHERE (CATEGORIA_ID = ?)
+[EL Fine]: sql: 2017-05-08 16:38:17.818--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[http-nio-8080-exec-4,5,main])--SELECT ID, CONTENIDO, ESTADO, TITULO, CATEGORIA_ID, CITIZEN_ID FROM TSUGERENCIA WHERE (CATEGORIA_ID = ?)
 	bind => [2]
-[EL Fine]: sql: 2017-05-05 22:54:12.606--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[http-nio-8080-exec-5,5,main])--SELECT ID, CONTENIDO, ESTADO, TITULO, CATEGORIA_ID, CITIZEN_ID FROM TSUGERENCIA WHERE (CATEGORIA_ID = ?)
+[EL Fine]: sql: 2017-05-08 16:38:17.842--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[http-nio-8080-exec-4,5,main])--SELECT ID, CONTENIDO, ESTADO, TITULO, CATEGORIA_ID, CITIZEN_ID FROM TSUGERENCIA WHERE (CATEGORIA_ID = ?)
 	bind => [3]
-[EL Fine]: sql: 2017-05-05 22:54:12.612--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[http-nio-8080-exec-5,5,main])--SELECT ID, CONTENIDO, ESTADO, TITULO, CATEGORIA_ID, CITIZEN_ID FROM TSUGERENCIA WHERE (CATEGORIA_ID = ?)
+[EL Fine]: sql: 2017-05-08 16:38:17.854--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[http-nio-8080-exec-4,5,main])--SELECT ID, CONTENIDO, ESTADO, TITULO, CATEGORIA_ID, CITIZEN_ID FROM TSUGERENCIA WHERE (CATEGORIA_ID = ?)
 	bind => [4]
-[EL Fine]: sql: 2017-05-05 22:54:12.62--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[http-nio-8080-exec-5,5,main])--SELECT ID, CONTENIDO, ESTADO, TITULO, CATEGORIA_ID, CITIZEN_ID FROM TSUGERENCIA WHERE (CATEGORIA_ID = ?)
+[EL Fine]: sql: 2017-05-08 16:38:17.875--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[http-nio-8080-exec-4,5,main])--SELECT ID, CONTENIDO, ESTADO, TITULO, CATEGORIA_ID, CITIZEN_ID FROM TSUGERENCIA WHERE (CATEGORIA_ID = ?)
 	bind => [5]
-[EL Fine]: sql: 2017-05-05 22:54:15.56--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[http-nio-8080-exec-6,5,main])--SELECT ID, FECHAFIN, FECHAINICIO, MINIMOVOTOS, NOMBRE FROM TCATEGORIA WHERE (ID > ?)
+[EL Fine]: sql: 2017-05-08 16:38:39.805--ClientSession(1289735640)--Connection(775878162)--Thread(Thread[http-nio-8080-exec-5,5,main])--UPDATE TCITIZENS SET PASSWORD = ? WHERE (ID = ?)
+	bind => [user, 9]
+[EL Fine]: sql: 2017-05-08 16:38:48.641--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[http-nio-8080-exec-6,5,main])--SELECT ID, PASSWORD, USUARIO FROM TADMINISTRADOR WHERE ((USUARIO = ?) AND (PASSWORD = ?))
+	bind => [user1, user1]
+[EL Fine]: sql: 2017-05-08 16:38:48.642--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[http-nio-8080-exec-6,5,main])--SELECT ID, DNI, APELLIDOS, DIRECCION, EMAIL, FECHANACIMIENTO, NACIONALIDAD, NOMBRE, PASSWORD, USUARIO FROM TCITIZENS WHERE ((USUARIO = ?) AND (PASSWORD = ?))
+	bind => [user1, user1]
+[EL Fine]: sql: 2017-05-08 16:38:53.303--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[http-nio-8080-exec-3,5,main])--SELECT ID, PASSWORD, USUARIO FROM TADMINISTRADOR WHERE ((USUARIO = ?) AND (PASSWORD = ?))
+	bind => [user1, user]
+[EL Fine]: sql: 2017-05-08 16:38:53.303--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[http-nio-8080-exec-3,5,main])--SELECT ID, DNI, APELLIDOS, DIRECCION, EMAIL, FECHANACIMIENTO, NACIONALIDAD, NOMBRE, PASSWORD, USUARIO FROM TCITIZENS WHERE ((USUARIO = ?) AND (PASSWORD = ?))
+	bind => [user1, user]
+[EL Fine]: sql: 2017-05-08 16:38:53.305--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[http-nio-8080-exec-3,5,main])--SELECT ID, CONTENIDO, ESTADO, TITULO, CATEGORIA_ID, CITIZEN_ID FROM TSUGERENCIA
+[EL Fine]: sql: 2017-05-08 16:38:53.324--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[http-nio-8080-exec-3,5,main])--SELECT ID, FECHAFIN, FECHAINICIO, MINIMOVOTOS, NOMBRE FROM TCATEGORIA WHERE (ID > ?)
 	bind => [1]
-[EL Fine]: sql: 2017-05-05 22:54:15.568--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[http-nio-8080-exec-6,5,main])--SELECT t0.PALABRA FROM TPALABRAS t0 WHERE (t0.Categoria_ID = ?)
-	bind => [2]
-[EL Fine]: sql: 2017-05-05 22:54:15.569--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[http-nio-8080-exec-6,5,main])--SELECT t0.PALABRA FROM TPALABRAS t0 WHERE (t0.Categoria_ID = ?)
-	bind => [3]
-[EL Fine]: sql: 2017-05-05 22:54:15.57--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[http-nio-8080-exec-6,5,main])--SELECT t0.PALABRA FROM TPALABRAS t0 WHERE (t0.Categoria_ID = ?)
-	bind => [4]
-[EL Fine]: sql: 2017-05-05 22:54:15.571--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[http-nio-8080-exec-6,5,main])--SELECT t0.PALABRA FROM TPALABRAS t0 WHERE (t0.Categoria_ID = ?)
-	bind => [5]
-[EL Fine]: sql: 2017-05-05 22:54:23.202--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[http-nio-8080-exec-7,5,main])--SELECT ID, CONTENIDO, ESTADO, TITULO, CATEGORIA_ID, CITIZEN_ID FROM TSUGERENCIA WHERE (CITIZEN_ID = ?)
-	bind => [9]
-[EL Fine]: sql: 2017-05-05 22:54:23.213--ClientSession(1600957622)--Connection(733143888)--Thread(Thread[http-nio-8080-exec-7,5,main])--INSERT INTO TSUGERENCIA (CONTENIDO, ESTADO, TITULO, CATEGORIA_ID, CITIZEN_ID) VALUES (?, ?, ?, ?, ?)
-	bind => [:D, EnVotacion, probando kafka, 2, 9]
-[EL Fine]: sql: 2017-05-05 22:54:23.216--ClientSession(1600957622)--Connection(733143888)--Thread(Thread[http-nio-8080-exec-7,5,main])--CALL IDENTITY()
-[EL Fine]: sql: 2017-05-05 22:54:23.642--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[http-nio-8080-exec-7,5,main])--SELECT ID, CONTENIDO, ESTADO, TITULO, CATEGORIA_ID, CITIZEN_ID FROM TSUGERENCIA
-[EL Fine]: sql: 2017-05-05 22:54:23.655--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[http-nio-8080-exec-7,5,main])--SELECT ID, CONTENIDO, ESTADO, TITULO, CATEGORIA_ID, CITIZEN_ID FROM TSUGERENCIA
-[EL Fine]: sql: 2017-05-05 22:54:23.664--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[http-nio-8080-exec-7,5,main])--SELECT ID, FECHAFIN, FECHAINICIO, MINIMOVOTOS, NOMBRE FROM TCATEGORIA WHERE (ID > ?)
-	bind => [1]
-[EL Fine]: sql: 2017-05-05 22:54:23.665--ServerSession(1892283878)--Connection(733143888)--Thread(Thread[http-nio-8080-exec-7,5,main])--SELECT ID, CONTENIDO, ESTADO, TITULO, CATEGORIA_ID, CITIZEN_ID FROM TSUGERENCIA WHERE (CITIZEN_ID = ?)
+[EL Fine]: sql: 2017-05-08 16:38:53.326--ServerSession(1977381311)--Connection(775878162)--Thread(Thread[http-nio-8080-exec-3,5,main])--SELECT ID, CONTENIDO, ESTADO, TITULO, CATEGORIA_ID, CITIZEN_ID FROM TSUGERENCIA WHERE (CITIZEN_ID = ?)
 	bind => [9]
